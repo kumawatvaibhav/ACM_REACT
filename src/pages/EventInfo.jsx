@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Poster from '../assets/Seminar_1.png';
+import pk from '../assets/pk_guru.png';
+import Rutvi from '../assets/rs_acm.jpg';
 
 const EventInfo = () => {
   return (
     <div className='flex flex-col min-h-screen bg-gray-900 text-white pt-16'>
       {/* ACM Inaugural Event Section */}
       <motion.header
-        className='flex items-center justify-center h-screen bg-gray-800 text-white py-12 md:py-20 lg:py-24'
+        className='flex items-center justify-center h-screen bg-transparent text-white py-12 md:py-20 lg:py-24'
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -36,7 +38,7 @@ const EventInfo = () => {
               August 1, 2024 | FertilizarNagar Auditorium
             </motion.p>
             <motion.div
-              className='mt-5 inline-block rounded-lg bg-blue-700 px-3 py-1 text-sm'
+              className='mt-5 max-w-[260px] inline-block rounded-lg bg-blue-700 px-3 py-1 text-sm'
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.9 }}
@@ -208,7 +210,7 @@ const EventInfo = () => {
                       <span className='relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full'>
                         <motion.img
                           className='aspect-square h-full w-full'
-                          src='/pk_guru.png'
+                          src={pk}
                           alt='Dr. Ponnurangam Kumaraguru'
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
@@ -221,7 +223,7 @@ const EventInfo = () => {
                       <p className='text-gray-400'>
                         Vice President of ACM India
                       </p>
-                      <p className='text-gray-400'>
+                      <p className='justify-content text-gray-400'>
                         Dr. Ponnurangam Kumaraguru ("PK") is a Professor of
                         Computer Science at IIIT-Hyderabad. PK is an ACM India
                         Council Member, currently serving as Vice President and
@@ -248,7 +250,7 @@ const EventInfo = () => {
                       <span className='relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full'>
                         <motion.img
                           className='aspect-square h-full w-full'
-                          src='/pk_guru.png'
+                          src={Rutvi}
                           alt='Dr. Rutvi Shah'
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
@@ -259,7 +261,7 @@ const EventInfo = () => {
                       <p className='text-gray-400'>
                         Chair of ACM India - W Committee
                       </p>
-                      <p className='text-gray-400'>
+                      <p className='justify-content text-gray-400'>
                         Dr. Rutvi Shah is an Assistant Professor of Computer
                         Science at SVGU, Ahmedabad. Rutvi Shah is currently
                         serving as Chair of ACM India - W Committee, she has
