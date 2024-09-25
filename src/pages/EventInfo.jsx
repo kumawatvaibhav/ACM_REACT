@@ -1,28 +1,93 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Poster from '../assets/Seminar_1.png';
-import pk from '../assets/pk_guru.png';
-import Rutvi from '../assets/rs_acm.jpg';
+import Poster from '../assets/inaugral_poster.webp';
+
+import pk from '../assets/pk_guru.webp';  //prof.pk image 
+import Rutvi from '../assets/rutvi_shah.webp'; //Rutvi image
+
+//for image slider : 
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+import eventPhoto1 from '../assets/event_image1.jpeg';
+import eventPhoto2 from '../assets/event_image2.jpeg';
+import eventPhoto3 from '../assets/event_image3.jpeg';
+import eventPhoto4 from '../assets/event_image4.jpeg';
+import eventPhoto5 from '../assets/event_image5.jpeg';
+import eventPhoto6 from '../assets/event_image6.jpeg';
+import eventPhoto7 from '../assets/event_image7.jpeg';
+import eventPhoto8 from '../assets/event_image8.jpeg';
+import eventPhoto9 from '../assets/event_image9.jpeg';
+import eventPhoto10 from '../assets/event_image10.jpeg';
+import eventPhoto11 from '../assets/event_image11.jpeg';
+
 
 const EventInfo = () => {
+
+  
+  const divStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '500px', // Medium height
+    backgroundSize: 'contain', // Ensure the image is not cropped
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  };
+
+  const slideImages = [
+    {
+      url: eventPhoto1,
+    },
+    {
+      url: eventPhoto2,
+    },
+    {
+      url: eventPhoto3,
+    },
+    {
+      url: eventPhoto4,
+    },
+    {
+      url: eventPhoto5,
+    },
+    {
+      url: eventPhoto6,
+    },
+    {
+      url: eventPhoto7,
+    },
+    {
+      url: eventPhoto8,
+    },
+    {
+      url: eventPhoto9,
+    },
+    {
+      url: eventPhoto10,
+    },
+    {
+      url: eventPhoto11,
+    },
+  ];
+
   return (
-    <div className='flex flex-col min-h-screen bg-gray-900 text-white pt-16'>
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white pt-16">
       {/* ACM Inaugural Event Section */}
       <motion.header
-        className='flex items-center justify-center h-screen bg-transparent text-white py-12 md:py-20 lg:py-24'
+        className="flex items-center justify-center lg:h-screen bg-transparent text-white py-12 md:py-20 lg:py-24"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className='container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-6'>
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-6">
           <motion.div
-            className='flex flex-col gap-10 md:gap-12 md:w-1/2'
+            className="flex flex-col gap-5 md:gap-6 md:w-1/2"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5 }}
           >
             <motion.h1
-              className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl'
+              className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
@@ -30,7 +95,7 @@ const EventInfo = () => {
               ACM Inaugural Event
             </motion.h1>
             <motion.p
-              className='text-lg md:text-xl'
+              className="text-lg md:text-xl"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
@@ -38,7 +103,7 @@ const EventInfo = () => {
               August 1, 2024 | FertilizarNagar Auditorium
             </motion.p>
             <motion.div
-              className='mt-5 max-w-[260px] inline-block rounded-lg bg-blue-700 px-3 py-1 text-sm'
+              className="mt-5 max-w-[260px] inline-block rounded-lg bg-blue-700 px-3 py-1 text-sm"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.9 }}
@@ -46,7 +111,7 @@ const EventInfo = () => {
               Association for Computing Machinery
             </motion.div>
             <motion.p
-              className='max-w-[600px] text-gray-300 md:text-xl'
+              className="max-w-[600px] text-gray-300 md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.2 }}
@@ -57,17 +122,17 @@ const EventInfo = () => {
             </motion.p>
           </motion.div>
           <motion.div
-            className='mt-10 md:mt-0 md:w-1/2 flex justify-center'
+            className="mt-10 md:mt-0 md:w-1/2 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 2 }}
           >
             <motion.img
-              width='350'
-              height='350'
-              alt='poster'
+              width="350"
+              height="350"
+              alt="poster"
               src={Poster}
-              className='rounded-lg max-w-full transform hover:scale-105 transition-transform duration-300'
+              className="rounded-lg max-w-full transform hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 1.5 }}
@@ -78,19 +143,19 @@ const EventInfo = () => {
 
       {/* Main Content Section */}
       <motion.main
-        className='flex-1 bg-gray-900'
+        className="flex-1 bg-gray-900"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <section className='w-full py-12 md:py-20 lg:py-24'>
-          <div className='container px-4 md:px-6'>
+        <section className="w-full py-12 md:py-20 lg:py-24">
+          <div className="container px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className='grid gap-6 md:grid-cols-2 md:gap-12'
+              className="grid gap-6 md:grid-cols-2 md:gap-12"
             >
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -98,18 +163,18 @@ const EventInfo = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
               >
-                <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl'>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Event Details
                 </h2>
-                <div className='mt-6 space-y-4'>
+                <div className="mt-6 space-y-4">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
-                    <h3 className='text-lg font-semibold'>Description</h3>
-                    <p className='text-gray-400'>
+                    <h3 className="text-lg font-semibold">Description</h3>
+                    <p className="text-gray-400 text-justify">
                       The upcoming event promises to expand your horizons in the
                       transformative fields of Artificial Intelligence and Data
                       Science. Join us for insightful discussions and
@@ -119,55 +184,55 @@ const EventInfo = () => {
                     </p>
                   </motion.div>
                   <motion.div
-                    className='mt-6 flex items-center gap-4'
+                    className="mt-6 flex items-center gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
                     <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='24'
-                      height='24'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      className='h-6 w-6 text-blue-400'
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-6 w-6 text-blue-400"
                     >
-                      <path d='M8 2v4'></path>
-                      <path d='M16 2v4'></path>
-                      <rect width='18' height='18' x='3' y='4' rx='2'></rect>
-                      <path d='M3 10h18'></path>
+                      <path d="M8 2v4"></path>
+                      <path d="M16 2v4"></path>
+                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                      <path d="M3 10h18"></path>
                     </svg>
                     <p>August 1, 2024</p>
                   </motion.div>
                   <motion.div
-                    className='mt-2 flex items-center gap-4'
+                    className="mt-2 flex items-center gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
                     <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='24'
-                      height='24'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      className='h-6 w-6 text-blue-400'
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-6 w-6 text-blue-400"
                     >
-                      <line x1='2' x2='5' y1='12' y2='12'></line>
-                      <line x1='19' x2='22' y1='12' y2='12'></line>
-                      <line x1='12' x2='12' y1='2' y2='5'></line>
-                      <line x1='12' x2='12' y1='19' y2='22'></line>
-                      <circle cx='12' cy='12' r='7'></circle>
+                      <line x1="2" x2="5" y1="12" y2="12"></line>
+                      <line x1="19" x2="22" y1="12" y2="12"></line>
+                      <line x1="12" x2="12" y1="2" y2="5"></line>
+                      <line x1="12" x2="12" y1="19" y2="22"></line>
+                      <circle cx="12" cy="12" r="7"></circle>
                     </svg>
                     <p>FertilizarNagar Auditorium, GSFC, Vadodara</p>
                   </motion.div>
@@ -177,10 +242,10 @@ const EventInfo = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
-                    <h3 className='text-lg font-semibold'>Agenda</h3>
-                    <ul className='space-y-2 text-gray-400'>
+                    <h3 className="text-lg font-semibold">Agenda</h3>
+                    <ul className="space-y-2 text-gray-400">
                       <li>
-                        <div className='flex items-center justify-between'>
+                        <div className="flex items-center justify-between">
                           <span>To be declared soon</span>
                           <span>9:00 AM - 3:00 PM</span>
                         </div>
@@ -195,35 +260,35 @@ const EventInfo = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
               >
-                <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl'>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                   Speakers
                 </h2>
-                <div className='mt-6 space-y-6'>
+                <div className="mt-6 space-y-6">
                   <motion.div
-                    className='flex items-start gap-4'
+                    className="flex items-start gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
                     <div>
-                      <span className='relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full'>
+                      <span className="relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full">
                         <motion.img
-                          className='aspect-square h-full w-full'
+                          className="aspect-square h-full w-full"
                           src={pk}
-                          alt='Dr. Ponnurangam Kumaraguru'
+                          alt="Dr. Ponnurangam Kumaraguru"
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 1 }}
                         />
                       </span>
-                      <h3 className='text-lg font-semibold'>
+                      <h3 className="text-lg font-semibold">
                         Dr. Ponnurangam Kumaraguru
                       </h3>
-                      <p className='text-gray-400'>
+                      <p className="text-gray-400">
                         Vice President of ACM India
                       </p>
-                      <p className='justify-content text-gray-400'>
+                      <p className="text-justify text-gray-400">
                         Dr. Ponnurangam Kumaraguru ("PK") is a Professor of
                         Computer Science at IIIT-Hyderabad. PK is an ACM India
                         Council Member, currently serving as Vice President and
@@ -240,28 +305,28 @@ const EventInfo = () => {
                     </div>
                   </motion.div>
                   <motion.div
-                    className='flex items-start gap-4'
+                    className="flex items-start gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
                     <div>
-                      <span className='relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full'>
+                      <span className="relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full">
                         <motion.img
-                          className='aspect-square h-full w-full'
+                          className="aspect-square h-full w-full"
                           src={Rutvi}
-                          alt='Dr. Rutvi Shah'
+                          alt="Dr. Rutvi Shah"
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 1 }}
                         />
                       </span>
-                      <h3 className='text-lg font-semibold'>Dr. Rutvi Shah</h3>
-                      <p className='text-gray-400'>
+                      <h3 className="text-lg font-semibold">Dr. Rutvi Shah</h3>
+                      <p className="text-gray-400">
                         Chair of ACM India - W Committee
                       </p>
-                      <p className='justify-content text-gray-400'>
+                      <p className="text-justify text-gray-400">
                         Dr. Rutvi Shah is an Assistant Professor of Computer
                         Science at SVGU, Ahmedabad. Rutvi Shah is currently
                         serving as Chair of ACM India - W Committee, she has
@@ -281,9 +346,63 @@ const EventInfo = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Event Gallery Section */}
+        <section className="w-full py-12 md:py-20 lg:py-24">
+          <div className="container px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center">
+                Event Gallery
+              </h2>
+              <div className="sm:py-2 md:py-5 lg:py-10 slide-container">
+                <Slide
+                  easing="ease"
+                  duration={3000}
+                  className="mt-6"
+                  indicators={true}
+                  autoplay={true}
+                  arrows={true}
+                  responsive={[
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                      },
+                    },
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                      },
+                    },
+                  ]}
+                >
+                  {slideImages.map((image, index) => (
+                    <div key={index}>
+                      <div
+                        style={{
+                          ...divStyle,
+                          backgroundImage: `url(${image.url})`,
+                        }}
+                      />
+                    </div>
+                  ))}
+                </Slide>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </motion.main>
     </div>
   );
 };
+
 
 export default EventInfo;

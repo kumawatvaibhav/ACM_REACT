@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [navbarBg, setNavbarBg] = useState('bg-transparent');
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -19,27 +20,37 @@ const Navbar = () => {
     setIsDropdownOpen(false);
   };
 
-  // Define a function to get the active class
   const getActiveClass = (path) =>
     location.pathname === path
       ? 'text-blue-500 md:text-blue-500'
       : 'text-white md:text-white-700';
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setNavbarBg('bg-transparent');
+      } else {
+        setNavbarBg('bg-transparent');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className='bg-transparent dark:bg-transparent fixed w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600'>
+    <nav className={`${navbarBg} fixed w-full z-20 top-0 start-0 border-gray-200 transition-colors duration-300`}>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <Link
-          to='/'
-          className='flex items-center space-x-3 rtl:space-x-reverse'
-        >
+        <Link to='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
           <div className='logo-container h-16'>
-            <img src='/logo.png' className='h-full' alt='Logo' />
+            <img src='/logo.webp' className='h-full' alt='Logo' />
           </div>
           <span className='self-center text-2xl font-semibold whitespace-nowrap text-white'>
             GSFCU ACM
           </span>
         </Link>
-        {/* Toggle button */}
         <button
           onClick={toggleMenu}
           data-collapse-toggle='navbar-sticky'
@@ -83,20 +94,13 @@ const Navbar = () => {
             </svg>
           )}
         </button>
-        <div
-          className={`${
-            isMenuOpen ? 'block' : 'hidden'
-          } w-full md:flex md:w-auto`}
-          id='navbar-sticky'
-        >
-          <ul className='flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0 mt-4 md:mt-0 font-medium border border-gray-100 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700'>
+        <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto`} id='navbar-sticky'>
+          <ul className='flex flex-col md:flex-row md:items-center md:space-x-8 p-4 md:p-0 mt-4 md:mt-0 font-medium border border-gray-100 md:border-0 rounded-lg  md:bg-transparent bg-gray-800 md:bg-transparent border-gray-700'>
             <li>
               <Link
                 to='/'
                 onClick={closeMenu}
-                className={`block py-2 px-3 no-underline hover:underline bg-blue-700 rounded md:bg-transparent ${getActiveClass(
-                  '/'
-                )}`}
+                className={`block py-2 px-3 no-underline hover:underline bg-blue-700 rounded md:bg-transparent ${getActiveClass('/')}`}
                 aria-current={location.pathname === '/' ? 'page' : undefined}
               >
                 Home
@@ -125,7 +129,7 @@ const Navbar = () => {
                 </svg>
               </button>
               {isDropdownOpen && (
-                <ul className='absolute left-0 mt-2 w-48 bg-gray-50 border border-gray-100 rounded-lg shadow-lg'>
+                <ul className='absolute left-0 mt-2 w-48 bg-gray-500 border border-gray-100 rounded-lg shadow-lg'>
                   <li>
                     <Link
                       to='/team'
@@ -151,9 +155,7 @@ const Navbar = () => {
               <Link
                 to='/about'
                 onClick={closeMenu}
-                className={`block py-2 px-3 no-underline hover:underline hover:bg-gray-100 md:hover:bg-transparent ${getActiveClass(
-                  '/about'
-                )}`}
+                className={`block py-2 px-3 no-underline hover:underline hover:bg-gray-100 md:hover:bg-transparent ${getActiveClass('/about')}`}
               >
                 About
               </Link>
@@ -162,9 +164,7 @@ const Navbar = () => {
               <Link
                 to='/event'
                 onClick={closeMenu}
-                className={`block py-2 px-3 no-underline hover:underline hover:bg-gray-100 md:hover:bg-transparent ${getActiveClass(
-                  '/event'
-                )}`}
+                className={`block py-2 px-3 no-underline hover:underline hover:bg-gray-100 md:hover:bg-transparent ${getActiveClass('/event')}`}
               >
                 Events
               </Link>
