@@ -1,24 +1,29 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import video from '../assets/spline_3.mp4';
-import Event from '../assets/Events.webp';
 import institution from '../assets/sot_front_2.jpg';
+import acm from '../assets/acm.jpg';
+import inaugration from '../assets/inaugral_poster.webp';
+import Event from '../assets/Events.webp';
+import video from '../assets/spline_3.mp4';
+import logo from '/logo.webp';
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 const scaleIn = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: 'easeOut' } },
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
 };
 
 const Home = () => {
-  const [refHeader, inViewHeader] = useInView({ threshold: 0.1 });
-  const [refPanel, inViewPanel] = useInView({ threshold: 0.1 });
-  const [refInvolved, inViewInvolved] = useInView({ threshold: 0.1 });
+  const [refHeader, inViewHeader] = useInView({threshold: 0.1 });
+  const [refEvents, inViewEvents] = useInView({threshold: 0.1 });
+  const [refPanel, inViewPanel] = useInView({threshold: 0.1 });
+  const [refInvolved, inViewInvolved] = useInView({threshold: 0.1 });
 
   const videoRef = useRef(null);
 
@@ -32,6 +37,7 @@ const Home = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 w-full h-full -z-10">
+        {/* <Spline scene="https://duzr3sg50z1zj.cloudfront.net/scene.splinecode" /> */}
         <video
           ref={videoRef}
           src={video}
@@ -42,108 +48,321 @@ const Home = () => {
           className="object-cover w-full h-full"
         ></video>
       </div>
-
-      <div className="min-h-screen flex flex-col text-white">
+      <div className="flex flex-col min-h-screen bg-transparent text-white pt-16">
+        {/* ACM Inaugural Event Section */}
         <motion.header
           ref={refHeader}
-          className="flex items-center justify-center h-screen bg-gradient-to-b from-black to-transparent"
+          className="flex items-center justify-center h-screen bg-transparent text-white py-12 md:py-20 lg:py-24"
           initial="hidden"
           animate={inViewHeader ? "visible" : "hidden"}
           variants={fadeInUp}
         >
-          <div className="container text-center">
-            <motion.h1
-              className="text-5xl font-bold mb-6"
+          <div className="container flex flex-col md:flex-row items-center justify-between px-4 md:px-6">
+            <motion.div
+              className="flex flex-col gap-5 md:gap-6 md:w-1/2"
+              initial="hidden"
+              animate={inViewHeader ? "visible" : "hidden"}
               variants={fadeInUp}
             >
-              Welcome to the ACM Student Chapter
-            </motion.h1>
-            <motion.p
-              className="text-lg md:text-2xl max-w-xl mx-auto"
-              variants={fadeInUp}
-            >
-              Discover the world of computing and connect with like-minded students.
-            </motion.p>
+              <motion.h1
+                className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
+                variants={fadeInUp}
+              >
+                Welcome to the
+              </motion.h1>
+              <motion.h1
+                className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
+                variants={fadeInUp}
+              >
+                ACM Student Chapter
+              </motion.h1>
+              <motion.div
+                className="mt-5 max-w-[260px] inline-block rounded-lg bg-blue-700 px-3 py-1 text-sm"
+                variants={scaleIn}
+              >
+                Association for Computing Machinery
+              </motion.div>
+              <motion.p className="text-lg md:text-xl" variants={fadeInUp}>
+                Discover the world of computing and connect with like-minded
+                students.
+              </motion.p>
+            </motion.div>
           </div>
         </motion.header>
 
+        {/* Main Content Section */}
         <motion.main
-          className="flex-1 bg-gradient-to-b from-gray-900 to-black"
+          className="flex-1 bg-gray-900"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
+          {/* <section
+            id="events"
+            className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-indigo-950"
+          >
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <motion.div
+                  ref={refEvents}
+                  className="space-y-2"
+                  initial="hidden"
+                  animate={inViewEvents ? "visible" : "hidden"}
+                  variants={fadeInUp}
+                >
+                  <motion.div
+                    className="inline-block rounded-lg bg-white px-3 py-1 text-md text-gray-800 dark:text-blue-800"
+                    variants={scaleIn}
+                  >
+                    Upcoming Events
+                  </motion.div>
+                  <motion.h2
+                    className="text-3xl font-extrabold tracking-tight sm:text-5xl text-blue-500 dark:text-blue-500"
+                    variants={fadeInUp}
+                  >
+                    Mark Your Calendars
+                  </motion.h2>
+                  <motion.p
+                    className="max-w-[900px] md:text-xl text-gray-400"
+                    variants={fadeInUp}
+                  >
+                    Check out our upcoming events and activities to get involved
+                    with the ACM Student Chapter.
+                  </motion.p>
+                </motion.div>
+              </div>
+              <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 slide-up">
+                <motion.img
+                  src={inaugration}
+                  alt="Event"
+                  className="mx-auto overflow-hidden rounded-xl object-cover shadow-lg transition duration-300 hover:scale-[1.03]"
+                  style={{ width: "350px", height: "350px" }}
+                  initial="hidden"
+                  animate={inViewEvents ? "visible" : "hidden"}
+                  variants={scaleIn}
+                />
+
+                <motion.div
+                  className="flex flex-col justify-center space-y-4"
+                  initial="hidden"
+                  animate={inViewEvents ? "visible" : "hidden"}
+                  variants={fadeInUp}
+                >
+                  <motion.h3
+                    className="text-xl font-bold text-white dark:text-black-800"
+                    variants={fadeInUp}
+                  >
+                    Event Details
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-400"
+                    variants={fadeInUp}
+                  >
+                    The upcoming event promises to expand your horizons in the
+                    transformative fields of Artificial Intelligence and Data
+                    Science. Join us for insightful discussions and thought
+                    provoking presentations from two distinguished speakers,
+                    each bringing a wealth of knowledge and unique perspective
+                    on pressing topics in technology.
+                  </motion.p>
+                  <motion.span className="text-bold" variants={fadeInUp}>
+                    <b>August 1, 2024</b>
+                  </motion.span>
+                  <motion.a
+                    href="/eventInfo"
+                    className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
+                    variants={fadeInUp}
+                  >
+                    <span>Learn More</span>
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11.41l2.3 2.3a1 1 0 01-1.42 1.42L11 9.42V14a1 1 0 11-2 0V9.42L7.12 10.7a1 1 0 01-1.42-1.42l2.3-2.3a1 1 0 011.41 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </motion.a>
+                </motion.div>
+              </div>
+            </div>
+          </section> */}
           <section
             id="panel"
-            className="py-24 px-4 md:px-6 bg-gradient-to-t from-black to-gray-900"
+            className="w-full py-12 md:py-24 lg:py-32 bg-cover bg-gradient-to-t from-indigo-950 to-gray-900 bg-no-repeat"
           >
-            <div className="container text-center">
-              <motion.h2
-                className="text-4xl font-extrabold text-blue-400 mb-4"
-                ref={refPanel}
-                initial="hidden"
-                animate={inViewPanel ? "visible" : "hidden"}
-                variants={fadeInUp}
-              >
-                Panel Series
-              </motion.h2>
-              <motion.p
-                className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto"
-                initial="hidden"
-                animate={inViewPanel ? "visible" : "hidden"}
-                variants={fadeInUp}
-              >
-                Join us for a series of distinguished speaker sessions focusing on cutting-edge topics in Cybersecurity and IoT.
-              </motion.p>
-              <motion.div
-                className="mt-8 flex justify-center"
-                initial="hidden"
-                animate={inViewPanel ? "visible" : "hidden"}
-                variants={scaleIn}
-              >
-                <img
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <motion.div
+                  ref={refPanel}
+                  className="space-y-2"
+                  initial="hidden"
+                  animate={inViewPanel ? "visible" : "hidden"}
+                  variants={fadeInUp}
+                >
+                  <motion.div
+                    className="inline-block rounded-lg bg-white px-3 py-1 text-md text-gray-800 dark:text-blue-800"
+                    variants={scaleIn}
+                  >
+                    Distinguished speaker sessions
+                  </motion.div>
+                  <motion.h2
+                    className="text-3xl font-extrabold tracking-tight sm:text-5xl text-blue-500 dark:text-blue-500"
+                    variants={fadeInUp}
+                  >
+                    Panel Series
+                  </motion.h2>
+                  <motion.p
+                    className="max-w-[900px] md:text-xl text-gray-400"
+                    variants={fadeInUp}
+                  >
+                    We have series of Distinguished Speakers sessions planned.
+                  </motion.p>
+                </motion.div>
+              </div>
+              <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 slide-up">
+                <motion.img
                   src={Event}
                   alt="Event"
-                  className="w-80 h-80 object-cover rounded-lg shadow-lg"
+                  className="mx-auto overflow-hidden rounded-xl object-contain shadow-lg transition duration-300 hover:scale-[1.03]"
+                  style={{ width: "350px", height: "350px" }}
+                  initial="hidden"
+                  animate={inViewPanel ? "visible" : "hidden"}
+                  variants={scaleIn}
                 />
-              </motion.div>
+
+                <motion.div
+                  className="flex flex-col justify-center space-y-4"
+                  initial="hidden"
+                  animate={inViewPanel ? "visible" : "hidden"}
+                  variants={fadeInUp}
+                >
+                  <motion.h3
+                    className="text-xl font-bold text-white dark:text-black-800"
+                    variants={fadeInUp}
+                  >
+                    Event Details
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-400"
+                    variants={fadeInUp}
+                  >
+                    We have an exciting series of Distinguished Speakers sessions scheduled, focusing on various cutting-edge topics. 
+                    The first session in this series, dedicated to the domain of Cybersecurity and the Internet of Things (IoT), is set to take place during the <b>first week of October.</b> 
+                    This session will feature prominent experts who will share their insights and expertise on these critical and rapidly evolving fields.
+                  </motion.p>
+                  <motion.span className="text-bold" variants={fadeInUp}>
+                    <b>Coming Soon</b>
+                  </motion.span>
+                  <motion.a
+                    href="/event"
+                    className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
+                    variants={fadeInUp}
+                  >
+                    <span>Learn More</span>
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11.41l2.3 2.3a1 1 0 01-1.42 1.42L11 9.42V14a1 1 0 11-2 0V9.42L7.12 10.7a1 1 0 01-1.42-1.42l2.3-2.3a1 1 0 011.41 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </motion.a>
+                </motion.div>
+              </div>
             </div>
           </section>
-
           <section
             id="getInvolved"
-            className="py-24 px-4 md:px-6 bg-gradient-to-b from-black to-gray-900"
+            className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-indigo-950"
           >
-            <div className="container text-center">
-              <motion.h2
-                className="text-4xl font-extrabold text-blue-400 mb-4"
-                ref={refInvolved}
-                initial="hidden"
-                animate={inViewInvolved ? "visible" : "hidden"}
-                variants={fadeInUp}
-              >
-                Get Involved
-              </motion.h2>
-              <motion.p
-                className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto"
-                initial="hidden"
-                animate={inViewInvolved ? "visible" : "hidden"}
-                variants={fadeInUp}
-              >
-                Connect with like-minded individuals, participate in exclusive events, and make a difference in the computing community.
-              </motion.p>
-              <motion.div
-                className="mt-8 flex justify-center"
-                initial="hidden"
-                animate={inViewInvolved ? "visible" : "hidden"}
-                variants={scaleIn}
-              >
-                <img
-                  src={institution}
-                  alt="Institution"
-                  className="w-80 h-80 object-cover rounded-lg shadow-lg"
+            <div className="container px-4 md:px-6">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <motion.div
+                  ref={refInvolved}
+                  className="space-y-2"
+                  initial="hidden"
+                  animate={inViewInvolved ? "visible" : "hidden"}
+                  variants={fadeInUp}
+                >
+                  <motion.div
+                    className="inline-block rounded-lg bg-white px-3 py-1 text-md text-gray-800 dark:text-blue-800"
+                    variants={scaleIn}
+                  >
+                    Get Involved
+                  </motion.div>
+                  <motion.h2
+                    className="text-3xl font-extrabold tracking-tight sm:text-5xl text-blue-500 dark:text-blue-500"
+                    variants={fadeInUp}
+                  >
+                    Join the ACM Student Chapter
+                  </motion.h2>
+                  <motion.p
+                    className="max-w-[900px] md:text-xl text-gray-400"
+                    variants={fadeInUp}
+                  >
+                    Be a part of the global computing community and advance your
+                    career through our various programs and events.
+                  </motion.p>
+                </motion.div>
+              </div>
+              <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 slide-up">
+                <motion.img
+                  src={logo}
+                  alt="Join ACM"
+                  className="mx-auto overflow-hidden rounded-xl object-contain shadow-lg transition duration-300 hover:scale-[1.03]"
+                  style={{ maxWidth: "100%", maxHeight: "350px" }}
+                  initial="hidden"
+                  animate={inViewInvolved ? "visible" : "hidden"}
+                  variants={scaleIn}
                 />
-              </motion.div>
+                <motion.div
+                  className="flex flex-col justify-center space-y-4"
+                  initial="hidden"
+                  animate={inViewInvolved ? "visible" : "hidden"}
+                  variants={fadeInUp}
+                >
+                  <motion.h3
+                    className="text-xl font-bold text-white dark:text-black-800"
+                    variants={fadeInUp}
+                  >
+                    Join Us
+                  </motion.h3>
+                  <motion.p
+                    className="text-gray-400"
+                    variants={fadeInUp}
+                  >
+                    Join the ACM Student Chapter to enhance your knowledge,
+                    network with professionals, and gain valuable experience in
+                    the field of computing.
+                  </motion.p>
+                  <motion.a
+                    href="https://forms.gle/k4c9RHiJbGKWGxX7A"
+                    className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
+                    variants={fadeInUp}
+                  >
+                    <span>Sign Up Now</span>
+                    <svg
+                      className="h-4 w-4"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11.41l2.3 2.3a1 1 0 01-1.42 1.42L11 9.42V14a1 1 0 11-2 0V9.42L7.12 10.7a1 1 0 01-1.42-1.42l2.3-2.3a1 1 0 011.41 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </motion.a>
+                </motion.div>
+              </div>
             </div>
           </section>
         </motion.main>
