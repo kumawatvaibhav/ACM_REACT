@@ -1,13 +1,15 @@
 import React from "react";
-import event from "../assets/Events.webp";
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import inaugration from "../assets/inaugral_poster.webp";
-import coming from '../assets/coming_soon.webp';
-import poster from '../assets/New_here.png';
-import acm from '../assets/acm.jpg';
-import logo from '/logo.webp';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Components
 import Involved from "../components/Get_involved";
+
+// Images:
+import Expert from "../assets/poster/Expert_talk.png";
+import event from "../assets/poster/Events.webp";
+import inaugration from "../assets/poster/inaugral_poster.webp";
+import CodeWars from "../assets/poster/CodeWars_ACM.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,9 +22,18 @@ const scaleIn = {
 };
 
 const Event = () => {
-  const [refInvolved, inViewInvolved] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [refEvents, inViewEvents] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [refPastEvents, inViewPastEvents] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [refInvolved, inViewInvolved] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [refEvents, inViewEvents] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [refPastEvents, inViewPastEvents] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
     <motion.div
@@ -33,7 +44,7 @@ const Event = () => {
     >
       {/* Top Section */}
       <motion.section
-        className="py-24 md:py-32 lg:py-40 bg-gray-800"
+        className="py-32 md:py-40 lg:py-48 bg-gray-800" // Increased padding from top
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -96,7 +107,7 @@ const Event = () => {
         ref={refEvents}
         className="bg-muted py-20 md:py-32 lg:py-40 text-white dark:bg-white-800"
         initial="hidden"
-        animate={inViewEvents ? 'visible' : 'hidden'}
+        animate={inViewEvents ? "visible" : "hidden"}
         variants={fadeInUp}
       >
         <div className="container px-4 md:px-6">
@@ -113,23 +124,19 @@ const Event = () => {
             <motion.div
               className="text-center"
               initial="hidden"
-              animate={inViewEvents ? 'visible' : 'hidden'}
+              animate={inViewEvents ? "visible" : "hidden"}
               variants={scaleIn}
             >
               <motion.img
-                src={coming}
+                src={Expert}
                 alt="Event 2"
                 width="350px"
                 height="350px"
                 className="inline-block rounded-lg mx-auto"
                 initial="hidden"
-                animate={inViewEvents ? 'visible' : 'hidden'}
+                animate={inViewEvents ? "visible" : "hidden"}
                 variants={scaleIn}
               />
-              <div className="card-body">
-                <h5 className="card-title"></h5>
-                <p className="card-text"></p>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -141,7 +148,7 @@ const Event = () => {
         ref={refPastEvents}
         className="w-full py-20 md:py-32 lg:py-40 bg-light"
         initial="hidden"
-        animate={inViewPastEvents ? 'visible' : 'hidden'}
+        animate={inViewPastEvents ? "visible" : "hidden"}
         variants={fadeInUp}
       >
         <div className="container px-4 md:px-6">
@@ -152,12 +159,11 @@ const Event = () => {
               get a sense of what we've accomplished.
             </p>
           </div>
-          <div className="flex justify-center">
-            <div className="w-full max-w-md">
+          <div className="flex flex-wrap justify-center gap-8"> {/* Updated flex to wrap and add space */}
             <motion.div
-              className="text-center"
+              className="text-center w-full md:w-1/3" // Added equal width for the events
               initial="hidden"
-              animate={inViewEvents ? 'visible' : 'hidden'}
+              animate={inViewEvents ? "visible" : "hidden"}
               variants={scaleIn}
             >
               <motion.img
@@ -167,25 +173,48 @@ const Event = () => {
                 height="350px"
                 className="inline-block rounded-lg mx-auto"
                 initial="hidden"
-                animate={inViewEvents ? 'visible' : 'hidden'}
+                animate={inViewEvents ? "visible" : "hidden"}
                 variants={scaleIn}
               />
-              <div className="card-body">
-                <h5 className="card-title"></h5>
-                <p className="card-text"></p>
-                <p className="card-text">
-                  <small className="text-rose-500">
-                    <a
-                      href="/eventInfo"
-                      className="inline-block mt-4 px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition"
-                    >
-                      Learn More
-                    </a>
-                  </small>
-                </p>
-              </div>
+              <p className="card-text">
+                <small className="text-rose-500">
+                  <a
+                    href="/event/Inaugral"
+                    className="inline-block mt-4 px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition"
+                  >
+                    Learn More
+                  </a>
+                </small>
+              </p>
             </motion.div>
-            </div>
+
+            <motion.div
+              className="text-center w-full md:w-1/3"
+              initial="hidden"
+              animate={inViewEvents ? "visible" : "hidden"}
+              variants={scaleIn}
+            >
+              <motion.img
+                src={CodeWars}
+                alt="Event 2"
+                width="250px"
+                height="250px"
+                className="inline-block rounded-lg mx-auto"
+                initial="hidden"
+                animate={inViewEvents ? "visible" : "hidden"}
+                variants={scaleIn}
+              />
+              <p className="card-text">
+                <small className="text-rose-500">
+                  <a
+                    href="/event/CodeWars"
+                    className="inline-block mt-4 px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition"
+                  >
+                    Learn More
+                  </a>
+                </small>
+              </p>
+            </motion.div>
           </div>
         </div>
       </motion.section>

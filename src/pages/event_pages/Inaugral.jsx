@@ -1,27 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Poster from '../assets/inaugral_poster.webp';
+import Poster from '../../assets/poster/inaugral_poster.webp';
 
-import pk from '../assets/pk_guru.webp';  //prof.pk image 
-import Rutvi from '../assets/rutvi_shah.webp'; //Rutvi image
+import pk from '../../assets/speakers/pk_guru.webp';  //prof.pk image 
+import Rutvi from '../../assets/speakers/rutvi_shah.webp'; //Rutvi image
 
 //for image slider : 
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import eventPhoto1 from '../assets/event_image1.jpeg';
-import eventPhoto2 from '../assets/event_image2.jpeg';
-import eventPhoto3 from '../assets/event_image3.jpeg';
-import eventPhoto4 from '../assets/event_image4.jpeg';
-import eventPhoto5 from '../assets/event_image5.jpeg';
-import eventPhoto6 from '../assets/event_image6.jpeg';
-import eventPhoto7 from '../assets/event_image7.jpeg';
-import eventPhoto8 from '../assets/event_image8.jpeg';
-import eventPhoto9 from '../assets/event_image9.jpeg';
-import eventPhoto10 from '../assets/event_image10.jpeg';
-import eventPhoto11 from '../assets/event_image11.jpeg';
+import eventPhoto1 from '../../assets/Gallery/ACM_Inaugral/event_image1.jpeg';
+import eventPhoto2 from '../../assets/Gallery/ACM_Inaugral/event_image2.jpeg';
+import eventPhoto3 from '../../assets/Gallery/ACM_Inaugral/event_image3.jpeg';
+import eventPhoto4 from '../../assets/Gallery/ACM_Inaugral/event_image4.jpeg';
+import eventPhoto5 from '../../assets/Gallery/ACM_Inaugral/event_image5.jpeg';
+import eventPhoto6 from '../../assets/Gallery/ACM_Inaugral/event_image6.jpeg';
+import eventPhoto7 from '../../assets/Gallery/ACM_Inaugral/event_image7.jpeg';
+import eventPhoto8 from '../../assets/Gallery/ACM_Inaugral/event_image8.jpeg';
+import eventPhoto9 from '../../assets/Gallery/ACM_Inaugral/event_image9.jpeg';
+import eventPhoto10 from '../../assets/Gallery/ACM_Inaugral/event_image10.jpeg';
+import eventPhoto11 from '../../assets/Gallery/ACM_Inaugral/event_image11.jpeg';
 
 
-const EventInfo = () => {
+const Inaugral = () => {
 
   
   const divStyle = {
@@ -405,4 +405,4 @@ const EventInfo = () => {
 };
 
 
-export default EventInfo;
+export default Inaugral;

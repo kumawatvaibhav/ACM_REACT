@@ -169,6 +169,15 @@ const Navbar = () => {
                 Events
               </Link>
             </li>
+            <li>
+              <Link
+                to='/Gallery'
+                onClick={closeMenu}
+                className={`block py-2 px-3 no-underline hover:underline hover:bg-gray-100 md:hover:bg-transparent ${getActiveClass('/gallery')}`}
+              >
+                Gallery
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

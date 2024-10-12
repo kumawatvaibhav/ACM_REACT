@@ -1,53 +1,50 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import gsfcLogo from '../assets/gsfc-logo.png';
-import acmLogo from '/logo.webp';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Social icons
+import gsfcLogo from '../assets/organisation/gsfc-logo.png'; // Replace with your GSFCU logo path
+import acmLogo from '/logo.webp'; // ACM logo path
 
 const Footer = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <footer className="bg-blue-900 border-t-4 border-gray-500 text-white py-8">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <motion.div
-          className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-4 lg:space-y-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <div className="flex items-center space-x-4">
-            <Link to='https://www.gsfcuniversity.ac.in/'>
-            <img src={gsfcLogo} alt="GSFC University Logo" className="h-12" />
-            </Link>
+    <footer className="bg-gradient-to-r from-indigo-900 via-indigo-700 to-blue-500 text-white py-10 rounded-lg">
+      <div className="container mx-auto px-6 flex flex-col lg:flex-row justify-between items-center">
+        
+        {/* Left Section: ACM Logo and Text */}
+        <div className="flex items-center space-x-4 lg:w-1/3">
+          <img src={acmLogo} alt="ACM Logo" className="h-16" />
+          <div>
+            <h3 className="text-lg font-semibold">Association for Computing Machinery</h3>
+            <p className="text-sm">GSFCU Student Chapter</p>
+          </div>
+        </div>
+
+        {/* Center Section: Contact Us */}
+        <div className="lg:w-2/3 text-center mt-6 lg:mt-0">
+          <h4 className="text-lg font-semibold">Contact Us</h4>
+          <div className="flex justify-center space-x-6 mt-4">
+            <a href="https://www.instagram.com/acm_gsfcu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-white text-2xl hover:text-gray-300" />
+            </a>
+            <a href="https://www.linkedin.com/company/acm-gsfcu/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-white text-2xl hover:text-gray-300" />
+            </a>
+            <a href="https://www.facebook.com/gsfcu_acm" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-white text-2xl hover:text-gray-300"/>
+            </a>
+          </div>
+        </div>
+
+        {/* Right Section: Developed By */}
+        <div className="lg:w-1/3 text-center lg:text-right mt-6 lg:mt-0">
+          <h4 className="text-lg font-semibold">Developed By</h4>
+          <div className="flex items-center justify-center lg:justify-end mt-4 space-x-2">
             <img src={acmLogo} alt="ACM Logo" className="h-12" />
+            <div>
+              <p className="text-sm font-semibold">Vaibhav Kumawat</p>
+              <p className="text-sm">Tech Lead & Web-Master</p>
+            </div>
           </div>
-          <div className="text-center lg:text-left">
-            <h3 className="text-lg font-semibold">GSFC University ACM Student Chapter</h3>
-            <p className="mt-2">Fostering the growth of technology and innovation.</p>
-          </div>
-          <div className="lg:hidden">
-            <button
-              className="bg-gray-700 text-white py-2 px-4 rounded"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              Menu
-            </button>
-          </div>
-          <div className={`flex-col space-y-2 lg:space-y-0 lg:space-x-4 lg:flex ${isOpen ? 'flex' : 'hidden'} lg:flex-row items-center`}>
-            <a href="/about" className="text-white-600 hover:text-black">About Us</a>
-            <a href="/event" className="text-white-600 hover:text-black">Events</a>
-            <a href="/#get-involved" className="text-white-600 hover:text-black">Get Involved</a>
-          </div>
-        </motion.div>
-        <motion.div
-          className="mt-8 text-center text-white"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <p>&copy; {new Date().getFullYear()} GSFC University ACM Student Chapter. All rights reserved.</p>
-        </motion.div>
+        </div>
+
       </div>
     </footer>
   );

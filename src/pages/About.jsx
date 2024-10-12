@@ -1,7 +1,7 @@
 import React from 'react';
-import institution from '../assets/sot_front_2.jpg';
+import institution from '../assets/organisation/sot_front_2.jpg';
 import { motion } from 'framer-motion';
-import acm from '../assets/acm.jpg';
+import acm from '../assets/organisation/acm.jpg';
 
 const About = () => {
   return (

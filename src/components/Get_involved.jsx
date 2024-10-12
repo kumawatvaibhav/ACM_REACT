@@ -84,7 +84,7 @@ const Involved = () => {
                 className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
                 variants={fadeInUp}
               >
-                <span>Sign Up Now</span>
+                <span className="text-white">Sign Up Now</span>
                 <svg
                   className="h-4 w-4"
                   viewBox="0 0 20 20"

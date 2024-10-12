@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import president from '../assets/president_sir.jpg';
-import provost from '../assets/provost.png';
+import president from '../assets/officers/Leaders/president_sir.jpg';
+import provost from '../assets/officers/Leaders/provost.png';
 
 const Officer = () => {
   return (

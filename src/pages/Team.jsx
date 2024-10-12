@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import nandish from '../assets/nandish_2.jpeg';
-import tejas from '../assets/tejas_2.jpg';
-import kanika from '../assets/Kanika_3.jpg';
-import shreya from '../assets/Shreya_2.jpg';
-import Mosam_mam from '../assets/Mosam_mam.jpeg';
-import tirth from '../assets/Tirth_2.png';
-import chirag from '../assets/Chirag_2.png';
+
+// team images
+import nandish from '../assets/officers/Team/nandish_2.jpeg';
+import tejas from '../assets/officers/Team/tejas_2.jpg';
+import kanika from '../assets/officers/Team/Kanika_3.jpg';
+import shreya from '../assets/officers/Team/Shreya_2.jpg';
+import Mosam_mam from '../assets/officers/Team/Mosam_mam.jpeg';
+import chirag from '../assets/officers/Team/Chirag_2.png';
+import vaibhav from '/user.png';
 
 const teamMembers = [
   {
@@ -35,9 +37,9 @@ const teamMembers = [
     description: '',
   },
   {
-    name: 'Tirth Sharma',
-    role: 'Web Master',
-    imageUrl: tirth,
+    name: 'Vaibhav Kumawat',
+    role: 'Web Master & Tech Lead',
+    imageUrl: vaibhav,
     description: '',
   },
   {
