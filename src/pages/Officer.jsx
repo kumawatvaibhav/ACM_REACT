@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import president from '../assets/officers/Leaders/president_sir.jpg';
-import provost from '../assets/officers/Leaders/provost.png';
 
 const Officer = () => {
   return (
@@ -49,7 +47,7 @@ const Officer = () => {
               whileHover={{ scale: 1.05 }}
             >
               <img
-                src={president}
+                src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774282/president_sir_cgldyw.jpg'}
                 alt="president"
                 className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56"
               />
@@ -82,7 +80,7 @@ const Officer = () => {
               transition={{ duration: 0.5 }}
             >
               <img
-                src={provost}
+                src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774282/provost_nciag8.png'}
                 alt="provost"
                 className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56"
               />

@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion'; // for animation we are using motion-framer
 import { useInView } from 'react-intersection-observer';
-import UpcomingEvent from '../components/UpcomingEvent'; // make sure this component returns appropriate JSX
+
 
 // images and video
-import Event from '../assets/poster/Events.webp';
-import video from '../assets/spline_3.mp4';
 import logo from '/logo.webp';
 import AboutSection from '../components/AboutSection';
 import TeamSection from '../components/TeamSection';

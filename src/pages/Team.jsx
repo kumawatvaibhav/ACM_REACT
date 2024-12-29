@@ -1,3 +1,4 @@
+import { GridPattern } from "../components/ui/grid-pattern"
 import { MemberCard } from "../components/ui/member-card"
 
 
@@ -6,6 +7,7 @@ import teamMembers from "../lib/member"
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-[#020c1b] relative overflow-hidden py-16 px-4">
+      <GridPattern/>
       <div className="container mx-auto relative">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4 text-white tracking-tight">

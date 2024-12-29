@@ -1,24 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Poster from '../../assets/poster/inaugral_poster.webp';
-
-import pk from '../../assets/speakers/pk_guru.webp';  //prof.pk image 
-import Rutvi from '../../assets/speakers/rutvi_shah.webp'; //Rutvi image
 
 //for image slider : 
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import eventPhoto1 from '../../assets/Gallery/ACM_Inaugral/event_image1.jpeg';
-import eventPhoto2 from '../../assets/Gallery/ACM_Inaugral/event_image2.jpeg';
-import eventPhoto3 from '../../assets/Gallery/ACM_Inaugral/event_image3.jpeg';
-import eventPhoto4 from '../../assets/Gallery/ACM_Inaugral/event_image4.jpeg';
-import eventPhoto5 from '../../assets/Gallery/ACM_Inaugral/event_image5.jpeg';
-import eventPhoto6 from '../../assets/Gallery/ACM_Inaugral/event_image6.jpeg';
-import eventPhoto7 from '../../assets/Gallery/ACM_Inaugral/event_image7.jpeg';
-import eventPhoto8 from '../../assets/Gallery/ACM_Inaugral/event_image8.jpeg';
-import eventPhoto9 from '../../assets/Gallery/ACM_Inaugral/event_image9.jpeg';
-import eventPhoto10 from '../../assets/Gallery/ACM_Inaugral/event_image10.jpeg';
-import eventPhoto11 from '../../assets/Gallery/ACM_Inaugral/event_image11.jpeg';
 
 
 const Inaugral = () => {
@@ -36,37 +21,37 @@ const Inaugral = () => {
 
   const slideImages = [
     {
-      url: eventPhoto1,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774262/event_image1_ms1qiu.jpg',
     },
     {
-      url: eventPhoto2,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774254/event_image2_k89ril.jpg',
     },
     {
-      url: eventPhoto3,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774255/event_image3_ay9c35.jpg',
     },
     {
-      url: eventPhoto4,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774263/event_image4_ywvqte.jpg',
     },
     {
-      url: eventPhoto5,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774268/event_image5_iyzyh7.jpg',
     },
     {
-      url: eventPhoto6,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774262/event_image6_hbi3kb.jpg',
     },
     {
-      url: eventPhoto7,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774268/event_image7_dafuhf.jpg',
     },
     {
-      url: eventPhoto8,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774285/event_image8_afk4ue.jpg',
     },
     {
-      url: eventPhoto9,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774284/event_image9_sqgekw.jpg',
     },
     {
-      url: eventPhoto10,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774261/event_image10_xjsl0p.jpg',
     },
     {
-      url: eventPhoto11,
+      url: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774258/event_image11_zot7aq.jpg',
     },
   ];
 
@@ -131,7 +116,7 @@ const Inaugral = () => {
               width="350"
               height="350"
               alt="poster"
-              src={Poster}
+              src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774287/inaugral_poster_oeaxau.jpg"}
               className="rounded-lg max-w-full transform hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -260,7 +245,7 @@ const Inaugral = () => {
                       <span className="relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full">
                         <motion.img
                           className="aspect-square h-full w-full"
-                          src={pk}
+                          src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774287/pk_guru_c8sbpz.webp'}
                           alt="Dr. Ponnurangam Kumaraguru"
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
@@ -300,7 +285,7 @@ const Inaugral = () => {
                       <span className="relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full">
                         <motion.img
                           className="aspect-square h-full w-full"
-                          src={Rutvi}
+                          src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774287/rutvi_shah_gwqzga.webp"}
                           alt="Dr. Rutvi Shah"
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}

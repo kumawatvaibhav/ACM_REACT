@@ -1,32 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import CodeWar from "../../assets/poster/CodeWars_ACM.jpg";
-
-//Images :
-import Winner1 from "../../assets/Gallery/CodeWars/Winner1.jpg";
-import Winner2 from "../../assets/Gallery/CodeWars/Winner2.jpg";
-import Winner3 from "../../assets/Gallery/CodeWars/Winner3.jpg";
 
 //Image Slider : 
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import eventPhoto1 from "../../assets/Gallery/CodeWars/Codewars_1.jpg";
-import eventPhoto2 from "../../assets/Gallery/CodeWars/Codewars_2.jpg";
-import eventPhoto3 from "../../assets/Gallery/CodeWars/Codewars_3.jpg";
-import eventPhoto4 from "../../assets/Gallery/CodeWars/Codewars_4.jpg";
-import eventPhoto5 from "../../assets/Gallery/CodeWars/Codewars_5.jpg";
-import eventPhoto6 from "../../assets/Gallery/CodeWars/Codewars_6.jpg";
-import eventPhoto7 from "../../assets/Gallery/CodeWars/Codewars_7.jpg";
-import eventPhoto8 from "../../assets/Gallery/CodeWars/Codewars_8.jpg";
-import eventPhoto9 from "../../assets/Gallery/CodeWars/Codewars_9.jpg";
-import eventPhoto10 from "../../assets/Gallery/CodeWars/Codewars_10.jpg";
 
 
-
-// Programming languages logos or illustrations
-import JSLogo from "../../assets/Logo/JS_Logo.png"; // Example of a JavaScript logo
-import PythonLogo from "../../assets/Logo/PYTHON_Logo.png"; // Example of a Python logo
-import HTMLLogo from "../../assets/Logo/C_Logo.png"; // Example of an HTML logo
 
 const CodeWars = () => {
 
@@ -42,34 +21,34 @@ const CodeWars = () => {
 
   const slideImages = [
     {
-      url: eventPhoto1,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774269/Codewars_1_pk1ikd.jpg",
     },
     {
-      url: eventPhoto2,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774271/Codewars_10_kb9x6x.jpg",
     },
     {
-      url: eventPhoto3,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774272/Codewars_3_lj5gfo.jpg",
     },
     {
-      url: eventPhoto4,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774272/Codewars_4_yddtrn.jpg",
     },
     {
-      url: eventPhoto5,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774274/Codewars_5_udvaht.jpg",
     },
     {
-      url: eventPhoto6,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774273/Codewars_6_yz2xed.jpg",
     },
     {
-      url: eventPhoto7,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774283/Codewars_7_ym2icg.jpg",
     },
     {
-      url: eventPhoto8,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774275/Codewars_8_xigcjm.jpg",
     },
     {
-      url: eventPhoto9,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774276/Codewars_9_djyd01.jpg",
     },
     {
-      url: eventPhoto10,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774272/Codewars_2_wantsu.jpg",
     }
   ];
 
@@ -85,17 +64,17 @@ const CodeWars = () => {
         {/* Programming Language Logos Background */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <img
-            src={JSLogo}
+            src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774281/JS_Logo_zdytud.png"}
             alt="JavaScript"
             className="absolute w-32 top-10 left-16 animate-bounce"
           />
           <img
-            src={PythonLogo}
+            src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774281/PYTHON_Logo_xhjerx.png"}
             alt="Python"
             className="absolute mix-blend-overlay w-40 bottom-20 right-32 animate-spin "
           />
           <img
-            src={HTMLLogo}
+            src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774280/C_Logo_rdoaxb.png"}
             alt="HTML"
             className="absolute w-24 bottom-10 left-10 animate-pulse mix-blend-multiply"
           />
@@ -140,7 +119,7 @@ const CodeWars = () => {
               width="350"
               height="350"
               alt="Code Wars Poster"
-              src={CodeWar}
+              src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774286/CodeWars_ACM_ydhqua.jpg"}
               className="rounded-lg max-w-full hover:scale-105 transition-transform duration-300"
             />
           </motion.div>
@@ -263,7 +242,7 @@ const CodeWars = () => {
               >
                 <div className="bg-gray-600 rounded-t-lg flex justify-center items-center">
                   <img
-                    src={Winner2}
+                    src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774279/Winner2_x3zl1s.jpg"}
                     alt="Second Place"
                     className="h-[350px] w-[350px] object-cover rounded-t-lg"
                     loading="lazy"
@@ -284,7 +263,7 @@ const CodeWars = () => {
               >
                 <div className="bg-gray-600 rounded-t-lg flex justify-center items-center">
                   <img
-                    src={Winner1}
+                    src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774279/Winner1_klr68r.jpg"}
                     alt="First Place"
                     className="w-[350px] h-[350px] object-cover rounded-t-lg"
                   />
@@ -306,7 +285,7 @@ const CodeWars = () => {
               >
                 <div className="bg-gray-600 rounded-t-lg flex justify-center items-center">
                   <img
-                    src={Winner3}
+                    src={"https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774282/Winner3_inrbnv.jpg"}
                     alt="Third Place"
                     className="w-[350px] h-[350px] object-cover rounded-t-lg"
                   />
