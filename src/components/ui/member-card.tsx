@@ -12,7 +12,7 @@ interface MemberProps {
 
 export function MemberCard({ name, role, image, github, linkedin }: MemberProps) {
   return (
-    <Card className="overflow-hidden group hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 transform hover:-translate-y-2 bg-[#0a192f]/20 border-cyan-500/20 backdrop-blur-sm">
+    <Card className="overflow-hidden !bg-[#0a192f]/20 border-cyan-500/30 group hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm">
       <CardContent className="p-0">
         <div className="relative overflow-hidden">
           <img

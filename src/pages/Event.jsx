@@ -74,7 +74,7 @@ const Event = () => {
           </div>
         </div>
       ),
-      link: "/event/inaugural"
+      link: "/event/Inaugural"
     },
   ];
 
