@@ -1,8 +1,6 @@
-"use client";
 import { ImageGallery } from "react-image-grid-gallery";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 // Images for the gallery
 // for Inaugural:

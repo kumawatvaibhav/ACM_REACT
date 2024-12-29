@@ -1,6 +1,3 @@
-//this is the timeline component that will be used in the event page which is created using aceternity ui
-
-"use client";
 import {
   useMotionValueEvent,
   useScroll,
