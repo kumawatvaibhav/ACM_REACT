@@ -1,3 +1,5 @@
+//Section created for the upcoming events to showcase on the home page
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
@@ -21,9 +23,9 @@ export default function UpcomingEvent() {
     <div>
       <section
             id="events"
-            className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-indigo-950"
+            className="py-8 md:py-20 lg:py-20 flex justify-center"
           >
-            <div className="container px-4 md:px-6">
+            <div className="container max-w-6xl bg-gradient-to-t from-cyan-950 to-gray-900 rounded-3xl shadow-lg p-8 border border-cyan-600 relative">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <motion.div
                   ref={refEvents}

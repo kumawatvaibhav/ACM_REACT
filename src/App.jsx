@@ -14,6 +14,7 @@ import Team from './pages/Team.jsx';
 import About from './pages/About.jsx';
 import CodeWars from './pages/event_pages/CodeWars.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Darkside from './pages/event_pages/Darkside.jsx';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/about' Component={About} />
         <Route path='/event/CodeWars' Component={CodeWars}/>
         <Route path='/Gallery' Component={Gallery} />
+        <Route path='/event/Darkside' Component={Darkside}/>
       </Routes>
       <Footer />
     </Router>

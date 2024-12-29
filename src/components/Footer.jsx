@@ -1,7 +1,5 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Social icons
-import gsfcLogo from '../assets/organisation/gsfc-logo.png'; // Replace with your GSFCU logo path
-import acmLogo from '/logo.webp'; // ACM logo path
 
 const Footer = () => {
   return (
@@ -10,7 +8,7 @@ const Footer = () => {
         
         {/* Left Section: ACM Logo and Text */}
         <div className="flex items-center space-x-4 lg:w-1/3">
-          <img src={acmLogo} alt="ACM Logo" className="h-16" />
+          <img src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734863660/assets/lo2gnmd5kdhwkujipbos.webp'} alt="ACM Logo" className="h-16" />
           <div>
             <h3 className="text-lg font-semibold">Association for Computing Machinery</h3>
             <p className="text-sm">GSFCU Student Chapter</p>
@@ -37,7 +35,7 @@ const Footer = () => {
         <div className="lg:w-1/3 text-center lg:text-right mt-6 lg:mt-0">
           <h4 className="text-lg font-semibold">Developed By</h4>
           <div className="flex items-center justify-center lg:justify-end mt-4 space-x-2">
-            <img src={acmLogo} alt="ACM Logo" className="h-12" />
+            <img src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734863660/assets/lo2gnmd5kdhwkujipbos.webp'} alt="ACM Logo" className="h-12" />
             <div>
               <p className="text-sm font-semibold">Vaibhav Kumawat</p>
               <p className="text-sm">Tech Lead & Web-Master</p>

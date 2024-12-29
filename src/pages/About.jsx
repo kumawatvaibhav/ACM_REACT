@@ -1,7 +1,5 @@
 import React from 'react';
-import institution from '../assets/organisation/sot_front_2.jpg';
 import { motion } from 'framer-motion';
-import acm from '../assets/organisation/acm.jpg';
 
 const About = () => {
   return (
@@ -9,7 +7,7 @@ const About = () => {
       <section
         id="Institution"
         className="relative flex items-center justify-center w-full min-h-screen py-12 md:py-20 lg:py-24 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${institution})` }}
+        style={{ backgroundImage: `url(${'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774285/sot_front_2_tvhfxh.jpg'})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 container mx-auto px-4 md:px-6">
@@ -108,7 +106,7 @@ const About = () => {
             transition={{ duration: 1 }}
           >
             <motion.img
-              src={acm}
+              src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774285/acm_psckgc.jpg'}
               alt="About"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full lg:order-last"
               initial={{ opacity: 0, scale: 0.9 }}

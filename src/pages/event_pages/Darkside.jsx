@@ -1,78 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Poster from '../../assets/poster/inaugral_poster.webp';
+import React from "react";
+import { motion } from "framer-motion";
 
-import pk from '../../assets/speakers/pk_guru.webp';  //prof.pk image 
-import Rutvi from '../../assets/speakers/rutvi_shah.webp'; //Rutvi image
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
-//for image slider : 
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
-import eventPhoto1 from '../../assets/Gallery/ACM_Inaugral/event_image1.jpeg';
-import eventPhoto2 from '../../assets/Gallery/ACM_Inaugral/event_image2.jpeg';
-import eventPhoto3 from '../../assets/Gallery/ACM_Inaugral/event_image3.jpeg';
-import eventPhoto4 from '../../assets/Gallery/ACM_Inaugral/event_image4.jpeg';
-import eventPhoto5 from '../../assets/Gallery/ACM_Inaugral/event_image5.jpeg';
-import eventPhoto6 from '../../assets/Gallery/ACM_Inaugral/event_image6.jpeg';
-import eventPhoto7 from '../../assets/Gallery/ACM_Inaugral/event_image7.jpeg';
-import eventPhoto8 from '../../assets/Gallery/ACM_Inaugral/event_image8.jpeg';
-import eventPhoto9 from '../../assets/Gallery/ACM_Inaugral/event_image9.jpeg';
-import eventPhoto10 from '../../assets/Gallery/ACM_Inaugral/event_image10.jpeg';
-import eventPhoto11 from '../../assets/Gallery/ACM_Inaugral/event_image11.jpeg';
-
-
-const Inaugral = () => {
-
-  
+export default function Darkside() {
   const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '500px', // Medium height
-    backgroundSize: 'contain', // Ensure the image is not cropped
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "500px", // Medium height
+    backgroundSize: "contain", // Ensure the image is not cropped
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
   };
 
   const slideImages = [
     {
-      url: eventPhoto1,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1735449859/assets/Gallery/Expert%20Talk%20:%20Darkside/jwglypy6ctqflpjbw8y5.jpg",
     },
     {
-      url: eventPhoto2,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1735449859/assets/Gallery/Expert%20Talk%20:%20Darkside/czi5gv7y55uabkyjyzwj.jpg",
     },
     {
-      url: eventPhoto3,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1735449859/assets/Gallery/Expert%20Talk%20:%20Darkside/st20e0suka7lvmtqdc9y.jpg",
     },
     {
-      url: eventPhoto4,
-    },
-    {
-      url: eventPhoto5,
-    },
-    {
-      url: eventPhoto6,
-    },
-    {
-      url: eventPhoto7,
-    },
-    {
-      url: eventPhoto8,
-    },
-    {
-      url: eventPhoto9,
-    },
-    {
-      url: eventPhoto10,
-    },
-    {
-      url: eventPhoto11,
+      url: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1735449859/assets/Gallery/Expert%20Talk%20:%20Darkside/ztiaz6cfr9qcgunqjjsu.jpg",
     },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white pt-16">
-      {/* ACM Inaugural Event Section */}
+      {/* Header */}
       <motion.header
         className="flex items-center justify-center lg:h-screen bg-transparent text-white py-12 md:py-20 lg:py-24"
         initial={{ opacity: 0, y: -50 }}
@@ -92,7 +52,7 @@ const Inaugral = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              ACM Inaugural Event
+              Expert Talk
             </motion.h1>
             <motion.p
               className="text-lg md:text-xl"
@@ -100,7 +60,7 @@ const Inaugral = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
             >
-              August 1, 2024 | FertilizarNagar Auditorium
+              4th October 2024
             </motion.p>
             <motion.div
               className="mt-5 max-w-[260px] inline-block rounded-lg bg-blue-700 px-3 py-1 text-sm"
@@ -131,7 +91,9 @@ const Inaugral = () => {
               width="350"
               height="350"
               alt="poster"
-              src={Poster}
+              src={
+                "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774287/Expert_talk_j2r4nu.png"
+              }
               className="rounded-lg max-w-full transform hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -141,7 +103,7 @@ const Inaugral = () => {
         </div>
       </motion.header>
 
-      {/* Main Content Section */}
+      {/* Content Container */}
       <motion.main
         className="flex-1 bg-gray-900"
         initial={{ opacity: 0 }}
@@ -175,12 +137,10 @@ const Inaugral = () => {
                   >
                     <h3 className="text-lg font-semibold">Description</h3>
                     <p className="text-gray-400 text-justify">
-                      The upcoming event promises to expand your horizons in the
-                      transformative fields of Artificial Intelligence and Data
-                      Science. Join us for insightful discussions and
-                      thought-provoking presentations from two distinguished
-                      speakers, each bringing a wealth of knowledge and unique
-                      perspective on pressing topics in technology.
+                      Vladan Devedzic Professor of Computer Science, University
+                      of Belgrade, Serbia will be delivering an online talk on
+                      Artificial Intelligence: I'll see you on the dark side of
+                      the Moon.
                     </p>
                   </motion.div>
                   <motion.div
@@ -207,7 +167,7 @@ const Inaugral = () => {
                       <rect width="18" height="18" x="3" y="4" rx="2"></rect>
                       <path d="M3 10h18"></path>
                     </svg>
-                    <p>August 1, 2024</p>
+                    <p>4th October 2024</p>
                   </motion.div>
                   <motion.div
                     className="mt-2 flex items-center gap-4"
@@ -234,97 +194,34 @@ const Inaugral = () => {
                       <line x1="12" x2="12" y1="19" y2="22"></line>
                       <circle cx="12" cy="12" r="7"></circle>
                     </svg>
-                    <p>FertilizarNagar Auditorium, GSFC, Vadodara</p>
+                    <p>https://meet.google.com/fiq-gqwa-pjz</p>
                   </motion.div>
-                  
-                </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-              >
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                  Speakers
-                </h2>
-                <div className="mt-6 space-y-6">
                   <motion.div
-                    className="flex items-start gap-4"
+                    className="mt-2 flex items-center gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                   >
-                    <div>
-                      <span className="relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full">
-                        <motion.img
-                          className="aspect-square h-full w-full"
-                          src={pk}
-                          alt="Dr. Ponnurangam Kumaraguru"
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 1 }}
-                        />
-                      </span>
-                      <h3 className="text-lg font-semibold">
-                        Dr. Ponnurangam Kumaraguru
-                      </h3>
-                      <p className="text-gray-400">
-                        Vice President of ACM India
-                      </p>
-                      <p className="text-justify text-gray-400">
-                        Dr. Ponnurangam Kumaraguru ("PK") is a Professor of
-                        Computer Science at IIIT-Hyderabad. PK is an ACM India
-                        Council Member, currently serving as Vice President and
-                        Chair of the Research Facilitation Committee of ACM
-                        India. PK received his Ph.D. from the School of Computer
-                        Science at Carnegie Mellon University (CMU). His Ph.D.
-                        thesis work on anti-phishing research at CMU contributed
-                        in creating an award-winning startup. He has co-authored
-                        research papers in the field of Computational Social
-                        Science, Privacy and Security in Online Social Media,
-                        Cyber Security, Social Computing, Data Science for
-                        Social Good, amongst others.
-                      </p>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    className="flex items-start gap-4"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1 }}
-                  >
-                    <div>
-                      <span className="relative flex h-40 w-40 shrink-0 overflow-hidden rounded-full">
-                        <motion.img
-                          className="aspect-square h-full w-full"
-                          src={Rutvi}
-                          alt="Dr. Rutvi Shah"
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 1 }}
-                        />
-                      </span>
-                      <h3 className="text-lg font-semibold">Dr. Rutvi Shah</h3>
-                      <p className="text-gray-400">
-                        Chair of ACM India - W Committee
-                      </p>
-                      <p className="text-justify text-gray-400">
-                        Dr. Rutvi Shah is an Assistant Professor of Computer
-                        Science at SVGU, Ahmedabad. Rutvi Shah is currently
-                        serving as Chair of ACM India - W Committee, she has
-                        been volunteering for ACMI-W since 2015, and has been
-                        instrumental in organizing events, conferences,
-                        workshops, and seminars focused on women in computing.
-                        She holds a PhD in Computer Science with research area
-                        focused on automated systems for medical image
-                        processing. Also, she has undertaken research endeavors
-                        encompassing the realm of Data Science, Machine
-                        Learning, and its affiliated areas.
-                      </p>
-                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-6 w-6 text-blue-400"
+                    >
+                      <line x1="2" x2="5" y1="12" y2="12"></line>
+                      <line x1="19" x2="22" y1="12" y2="12"></line>
+                      <line x1="12" x2="12" y1="2" y2="5"></line>
+                      <line x1="12" x2="12" y1="19" y2="22"></line>
+                      <circle cx="12" cy="12" r="7"></circle>
+                    </svg>
+                    <p>https://www.youtube.com/watch?v=US6LKzLMJuI</p>
                   </motion.div>
                 </div>
               </motion.div>
@@ -332,7 +229,7 @@ const Inaugral = () => {
           </div>
         </section>
 
-        {/* Event Gallery Section */}
+        {/* Gallery */}
         <section className="w-full py-12 md:py-20 lg:py-24">
           <div className="container px-4 md:px-6">
             <motion.div
@@ -387,7 +284,4 @@ const Inaugral = () => {
       </motion.main>
     </div>
   );
-};
-
-
-export default Inaugral;
+}

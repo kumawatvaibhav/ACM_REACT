@@ -6,88 +6,73 @@ import { motion } from "framer-motion";
 
 // Images for the gallery
 // for Inaugural:
-import Image1 from "../assets/Gallery/ACM_Inaugral/event_image1.jpeg";
-import Image2 from "../assets/Gallery/ACM_Inaugral/event_image2.jpeg";
-import Image3 from "../assets/Gallery/ACM_Inaugral/event_image3.jpeg";
-import Image4 from "../assets/Gallery/ACM_Inaugral/event_image4.jpeg";
-import Image5 from "../assets/Gallery/ACM_Inaugral/event_image5.jpeg";
-import Image6 from "../assets/Gallery/ACM_Inaugral/event_image6.jpeg";
-import Image14 from "../assets/Gallery/ACM_Inaugral/event_image7.jpeg";
 
-// for CodeWars:
-import Image9 from "../assets/Gallery/CodeWars/Codewars_1.jpg";
-import Image11 from "../assets/Gallery/CodeWars/Codewars_2.jpg";
-import Image7 from "../assets/Gallery/CodeWars/Codewars_3.jpg";
-import Image8 from "../assets/Gallery/CodeWars/Codewars_4.jpg";
-import Image10 from "../assets/Gallery/CodeWars/Codewars_5.jpg";
-import Image12 from "../assets/Gallery/CodeWars/Codewars_6.jpg";
-import Image13 from "../assets/Gallery/CodeWars/Winner1.jpg"
 
 const imagesArray = [
   {
     alt: "Image1's alt text",
     caption: "Inaugral Event",
-    src: Image1,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774262/event_image1_ms1qiu.jpg',
   },
   {
     alt: "Image2's alt text",
     caption: "CodeWars ",
-    src: Image10,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774274/Codewars_5_udvaht.jpg',
   },
   {
     alt: "Image3's alt text",
     caption: "Inaugral Ceremory",
-    src: Image2,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774254/event_image2_k89ril.jpg',
   },
   {
     alt: "Image4's alt text",
     caption: "Expert Talk by Dr. Rutvi shah",
-    src: Image5,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774268/event_image5_iyzyh7.jpg',
   },
   {
     alt: "Image5's alt text", 
     caption: "Inaugral Event",
-    src: Image3,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774255/event_image3_ay9c35.jpg',
   },
   {
     alt: "Image6's alt text",
     caption: "Prof. PK",
-    src: Image6,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774262/event_image6_hbi3kb.jpg',
   },
   {
     alt: "Image7's alt text",
     caption: "Inaugral Event",
-    src: Image4,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774263/event_image4_ywvqte.jpg',
   },
   {
     alt: "Image8's alt text",
     caption: "CodeWars ",
-    src: Image7,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774272/Codewars_3_lj5gfo.jpg',
   },
   {
     alt: "Image9's alt text",
     caption: "Codewars Leaderboard",
-    src: Image8,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774272/Codewars_4_yddtrn.jpg',
   },
   {
     alt: "Image10's alt text",
     caption: "CodeWars ",
-    src: Image9,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774269/Codewars_1_pk1ikd.jpg',
   },
   {
     alt: "Image11's alt text",
     caption: "Expert Talk by Prof. PK",
-    src: Image14,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774261/event_image10_xjsl0p.jpg',
   },
   {
     alt: "Image12's alt text",
-    caption: "CodeWars Round 1 end",
-    src: Image11,
+    caption: "CodeWars Round 2",
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774272/Codewars_2_wantsu.jpg',
   },
   {
     alt: "Image13's alt text",
     caption: "CodeWars Winner",
-    src: Image13,
+    src: 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774279/Winner1_klr68r.jpg',
   }
 ];
 

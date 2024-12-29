@@ -1,7 +1,6 @@
 import React from "react";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import logo from "/logo.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -54,7 +53,7 @@ const Involved = () => {
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 slide-up">
             <motion.img
-              src={logo}
+              src={'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734863660/assets/lo2gnmd5kdhwkujipbos.webp'}
               alt="Join ACM"
               className="mx-auto overflow-hidden rounded-xl object-contain shadow-lg transition duration-300 hover:scale-[1.03]"
               style={{ maxWidth: "100%", maxHeight: "350px" }}

@@ -1,3 +1,8 @@
+// This Componenet is create to use as a pop when user enters onto our website 
+// To promote new events 
+
+
+
 import { useState, useEffect, useRef } from 'react';
 import Poster_Video from '../assets/poster/CodeWars.mp4';
 

@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
         <Link to='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
           <div className='logo-container h-16'>
-            <img src='/logo.webp' className='h-full' alt='Logo' />
+            <img src='https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734863660/assets/lo2gnmd5kdhwkujipbos.webp' className='h-full' alt='Logo' />
           </div>
           <span className='self-center text-2xl font-semibold whitespace-nowrap text-white'>
             GSFCU ACM
