@@ -6,15 +6,18 @@ import axios from "axios";
 import { Share2, Twitter, Linkedin, Link } from "lucide-react";
 
 export default function BlogDetails() {
-  const { id } = useParams(); // Get blog ID from URL
+  const { id } = useParams();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/blogs/${id}`)
+    console.log("Fetching Blog ID:");
+    console.log("Fetching Blog ID:", id);
+    axios.get(`https://acm-react.onrender.com/api/blogs/${id}`)
       .then(response => {
         setPost(response.data);
+        console.log(response.data);
         setLoading(false);
       })
       .catch(error => {

@@ -21,7 +21,7 @@ export default function BlogManagement() {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/blogs");
+      const response = await axios.get("https://acm-react.onrender.com/api/blogs");
       setPosts(response.data);
     } catch (err) {
       console.error("Error fetching posts:", err);
@@ -35,7 +35,7 @@ export default function BlogManagement() {
       const formData = new FormData();
       formData.append("image", file);
 
-      const response = await axios.post("http://localhost:5000/api/blogs/upload", formData, {
+      const response = await axios.post("https://acm-react.onrender.com/api/blogs/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -54,11 +54,11 @@ export default function BlogManagement() {
 
       if (selectedPost) {
         // Update existing post
-        const response = await axios.put(`http://localhost:5000/api/blogs/${selectedPost._id}`, blogData);
+        const response = await axios.put(`https://acm-react.onrender.com/api/blogs/${selectedPost._id}`, blogData);
         setPosts(posts.map((post) => (post._id === selectedPost._id ? response.data : post)));
       } else {
         // Add new post
-        const response = await axios.post("http://localhost:5000/api/blogs", blogData);
+        const response = await axios.post("https://acm-react.onrender.com/api/blogs", blogData);
         setPosts([...posts, response.data]);
       }
       resetForm();
@@ -70,7 +70,7 @@ export default function BlogManagement() {
   // Handle Delete
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`);
+      await axios.delete(`https://acm-react.onrender.com/api/blogs/${id}`);
       setPosts(posts.filter((post) => post._id !== id));
       if (selectedPost?._id === id) resetForm();
     } catch (err) {

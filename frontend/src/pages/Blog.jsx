@@ -25,7 +25,7 @@ export default function TechBlogPage() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/api/blogs")
+      .get("https://acm-react.onrender.com/api/blogs")
       .then((response) => {
         setPosts(response.data);
         setLoading(false);
@@ -55,7 +55,7 @@ export default function TechBlogPage() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/subscribe", { email });
+      await axios.post("https://acm-react.onrender.com/api/subscribe", { email });
       setMessage("You have successfully subscribed to our newsletter!");
       setEmail("");
     } catch (error) {

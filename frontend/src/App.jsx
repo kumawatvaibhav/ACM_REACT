@@ -58,7 +58,7 @@ function App() {
           <Route path='/Gallery' Component={Gallery} />
           <Route path='/event/Darkside' Component={Darkside} />
           <Route path='/Blog' Component={Blog} />
-          <Route path="/Blog/*" element={<BlogDetails />} />
+          <Route path="/Blog/:id" element={<BlogDetails />} />
           <Route path='/admin' Component={AdminDashboard} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<Login />} />
