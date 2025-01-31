@@ -9,6 +9,5 @@ module.exports = (req, res, next) => {
 
   console.log(process.env.JWT_SECRET);
 
-  req.user = verified;
   next();
 };
