@@ -66,10 +66,18 @@ const teamMembers = [
   {
     name : 'Sameer Gaur',
     role : 'Content head',
-    image : 'https://www.gravatar.com/avatar/?d=mp',
+    image : 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1738346462/assets/officers/Team/rhhxqpjf5jjohpibgqc5.jpg',
     description : '',
     github : 'https://github.com/Sameer-G30',
     linkedin : 'https://www.linkedin.com/in/sameer-gaur'
+  },
+  {
+    name : 'Vidur Shah',
+    role : 'Design Head',
+    image : 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1738346000/assets/officers/Team/wu86msy4xtpefbaxsqpe.jpg',
+    description : '',
+    github : '',
+    linkedin : 'https://www.linkedin.com/in/vidur-shah-ba6a0a283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
     name : 'Divy Puranik',

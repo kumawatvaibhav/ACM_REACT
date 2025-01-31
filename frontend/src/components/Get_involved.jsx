@@ -79,7 +79,7 @@ const Involved = () => {
                 computing.
               </motion.p>
               <motion.a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfp-zieHkdV0Fbwqg4dAIG9eUqNFboBswk4cAKELQy9CsywUA/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf8NeGFIU_0QfyVD0fozG0sj5xv44OjGW15WpRo1BGvHCQuWg/viewform?usp=dialog"
                 className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
                 variants={fadeInUp}
               >

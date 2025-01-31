@@ -12,8 +12,8 @@ export default function BlogManagement() {
   const [content, setContent] = useState("");
   const [author, setAuthor] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState(null); // For image preview
-  const [imageUrl, setImageUrl] = useState(""); // Stores uploaded image URL
+  const [image, setImage] = useState(null); 
+  const [imageUrl, setImageUrl] = useState(""); 
 
   useEffect(() => {
     fetchPosts();
@@ -35,12 +35,14 @@ export default function BlogManagement() {
       const formData = new FormData();
       formData.append("image", file);
 
+      console.log("Chutiya bc");
+
       const response = await axios.post("https://acm-react.onrender.com/api/blogs/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      setImageUrl(response.data.imageUrl); // Store the image URL
-      setImage(URL.createObjectURL(file)); // Show preview
+      setImageUrl(response.data.imageUrl); 
+      setImage(URL.createObjectURL(file)); 
     } catch (err) {
       console.error("Error uploading image:", err);
     }
@@ -53,11 +55,9 @@ export default function BlogManagement() {
       const blogData = { title, content, author, category, image: imageUrl };
 
       if (selectedPost) {
-        // Update existing post
         const response = await axios.put(`https://acm-react.onrender.com/api/blogs/${selectedPost._id}`, blogData);
         setPosts(posts.map((post) => (post._id === selectedPost._id ? response.data : post)));
       } else {
-        // Add new post
         const response = await axios.post("https://acm-react.onrender.com/api/blogs", blogData);
         setPosts([...posts, response.data]);
       }

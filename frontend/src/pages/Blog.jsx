@@ -145,7 +145,7 @@ export default function TechBlogPage() {
                     <p className="text-sm text-gray-500">
                       By <span className="font-semibold">{post.author}</span>
                       <br />
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(post.date).toLocaleDateString("in-IN")}
                     </p>
                   </div>
                 </div>

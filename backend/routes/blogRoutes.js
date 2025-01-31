@@ -22,17 +22,20 @@ router.delete("/:id", authMiddleware, blogController.deleteBlog);
 // Upload image to Cloudinary and return URL (Admin Only)
 router.post("/upload", authMiddleware, upload.single("image"), async (req, res) => {
   try {
+    console.log("File uploaded successfully");
+
     if (!req.file || !req.file.path) {
       return res.status(400).json({ message: "No file uploaded" });
     }
 
-    // Get Cloudinary URL
+    console.log("File uploaded successfully");
     const imageUrl = req.file.path;
 
-    res.json({ imageUrl }); // Send Cloudinary URL as response
+    res.json({ imageUrl }); 
   } catch (err) {
     res.status(500).json({ message: "Upload failed", error: err.message });
   }
 });
+
 
 module.exports = router;
