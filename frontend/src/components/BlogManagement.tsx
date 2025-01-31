@@ -41,6 +41,7 @@ export default function BlogManagement() {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
+      console.log("VDSBRSDS");
       setImageUrl(response.data.imageUrl); 
       setImage(URL.createObjectURL(file)); 
     } catch (err) {

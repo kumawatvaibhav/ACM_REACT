@@ -4,21 +4,6 @@ const blogController = require("../controllers/blogController");
 const upload = require("../middleware/upload");
 const authMiddleware = require("../middleware/authMiddleware"); // Import authentication middleware
 
-// Get all blogs (Public)
-router.get("/", blogController.getBlogs);
-
-// Get single blog by ID (Public)
-router.get("/:id", blogController.getBlogById);
-
-// Create a new blog (Admin Only)
-router.post("/", authMiddleware, blogController.createBlog);
-
-// Update a blog (Admin Only)
-router.put("/:id", authMiddleware, blogController.updateBlog);
-
-// Delete a blog (Admin Only)
-router.delete("/:id", authMiddleware, blogController.deleteBlog);
-
 // Upload image to Cloudinary and return URL (Admin Only)
 router.post("/upload", authMiddleware, upload.single("image"), async (req, res) => {
   try {
@@ -36,6 +21,21 @@ router.post("/upload", authMiddleware, upload.single("image"), async (req, res) 
     res.status(500).json({ message: "Upload failed", error: err.message });
   }
 });
+
+// Get all blogs (Public)
+router.get("/", blogController.getBlogs);
+
+// Get single blog by ID (Public)
+router.get("/:id", blogController.getBlogById);
+
+// Create a new blog (Admin Only)
+router.post("/", authMiddleware, blogController.createBlog);
+
+// Update a blog (Admin Only)
+router.put("/:id", authMiddleware, blogController.updateBlog);
+
+// Delete a blog (Admin Only)
+router.delete("/:id", authMiddleware, blogController.deleteBlog);
 
 
 module.exports = router;
