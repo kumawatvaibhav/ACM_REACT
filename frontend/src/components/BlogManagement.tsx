@@ -30,6 +30,9 @@ export default function BlogManagement() {
 
   // Handle Image Upload
   const handleImageUpload = async (file) => {
+
+    const token = localStorage.getItem("token");
+
     if (!file) return;
     try {
       const formData = new FormData();
@@ -38,7 +41,8 @@ export default function BlogManagement() {
       console.log("Chutiya bc");
 
       const response = await axios.post("https://acm-react.onrender.com/api/blogs/upload", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}`, },
+        
       });
 
       console.log("VDSBRSDS");
