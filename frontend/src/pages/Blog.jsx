@@ -65,26 +65,28 @@ export default function TechBlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-200">
-      <nav className="bg-white shadow-md sticky top-0 z-10">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-200 overflow-x-hidden">
+      {/* Navbar */}
+      <nav className="bg-white shadow-md sticky top-0 z-10 w-full">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">TECH-ACM</div>
+          <a href="/" className="text-2xl font-bold text-blue-600">ACM</a>
           <div className="flex items-center space-x-4">
             <Input
               type="text"
               placeholder="Search posts..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-64"
+              className="w-64 border-blue-600"
             />
-            <Button variant="outline" onClick={handleSubscribe}>
+            {/* <Button variant="outline" onClick={handleSubscribe}>
               Subscribe
-            </Button>
+            </Button> */}
           </div>
         </div>
       </nav>
 
-      <section className="bg-blue-600 text-white py-16">
+      {/* Hero Section */}
+      <section className="bg-blue-600 text-white py-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Explore the Latest in Tech</h1>
           <p className="text-xl mb-8">Stay informed with cutting-edge insights and trends</p>
@@ -94,8 +96,10 @@ export default function TechBlogPage() {
         </div>
       </section>
 
+      {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
-        <div className="flex flex-wrap gap-2 mb-8">
+        {/* Categories */}
+        <div className="flex flex-wrap gap-2 mb-8 justify-center">
           {CATEGORIES.map((category) => (
             <button
               key={category.name}
@@ -110,10 +114,11 @@ export default function TechBlogPage() {
           ))}
         </div>
 
-        <h2 className="text-3xl font-bold mb-6">
+        <h2 className="text-3xl font-bold mb-6 text-center">
           {selectedCategory === "All" ? "Latest Posts" : selectedCategory}
         </h2>
 
+        {/* Blog Posts */}
         {loading ? (
           <div className="flex justify-center items-center h-32">
             <Loader2 className="animate-spin text-blue-600 w-8 h-8" />
@@ -123,22 +128,20 @@ export default function TechBlogPage() {
             {filteredPosts.map((post) => (
               <div
                 key={post._id}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden"
+                onClick={() => navigate(`/blog/${post._id}`)}
               >
+                {post.image && (
+                  <img
+                    src={post.image}
+                    alt="Blog Cover"
+                    className="w-full h-64 object-contain rounded-t-lg"
+                  />
+                )}
                 <div className="p-6">
-                  <h3
-                    className="text-xl font-bold text-blue-600 cursor-pointer hover:underline mb-2"
-                    onClick={() => navigate(`/blog/${post._id}`)}
-                  >
+                  <h3 className="text-xl font-bold text-blue-600 mb-2">
                     {post.title}
                   </h3>
-                  {post.image && (
-                    <img
-                      src={post.image}
-                      alt="Blog Cover"
-                      className="w-full h-auto rounded-md mt-4"
-                    />
-                  )}
                   <p className="text-gray-600 mb-4">{post.content.substring(0, 100)}...</p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-semibold text-blue-600">{post.category}</span>

@@ -172,7 +172,7 @@ const Home = () => {
                     the field of computing.
                   </motion.p>
                   <motion.a
-                    href="https://forms.gle/k4c9RHiJbGKWGxX7A"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf8NeGFIU_0QfyVD0fozG0sj5xv44OjGW15WpRo1BGvHCQuWg/viewform"
                     className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
                     variants={fadeInUp}
                   >
