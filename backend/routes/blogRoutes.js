@@ -29,13 +29,13 @@ router.get("/", blogController.getBlogs);
 router.get("/:id", blogController.getBlogById);
 
 // Create a new blog (Admin Only)
-router.post("/", authMiddleware, blogController.createBlog);
+router.post("/create", authMiddleware, blogController.createBlog);
 
 // Update a blog (Admin Only)
-router.put("/:id", authMiddleware, blogController.updateBlog);
+router.put("/create/:id", authMiddleware, blogController.updateBlog);
 
 // Delete a blog (Admin Only)
-router.delete("/:id", authMiddleware, blogController.deleteBlog);
+router.delete("/delete/:id", authMiddleware, blogController.deleteBlog);
 
 
 module.exports = router;

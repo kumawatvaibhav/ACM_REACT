@@ -15,6 +15,8 @@ export default function BlogManagement() {
   const [image, setImage] = useState(null); 
   const [imageUrl, setImageUrl] = useState(""); 
 
+  const token = localStorage.getItem("token");
+
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -41,8 +43,8 @@ export default function BlogManagement() {
       console.log("Chutiya bc");
 
       const response = await axios.post("https://acm-react.onrender.com/api/blogs/upload", formData, {
-        headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}`, },
-        
+        headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}` },
+
       });
 
       console.log("VDSBRSDS");
@@ -60,10 +62,16 @@ export default function BlogManagement() {
       const blogData = { title, content, author, category, image: imageUrl };
 
       if (selectedPost) {
-        const response = await axios.put(`https://acm-react.onrender.com/api/blogs/${selectedPost._id}`, blogData);
+        const response = await axios.put(`https://acm-react.onrender.com/api/blogs/create/${selectedPost._id}`, blogData, { 
+          headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}` },
+      });
         setPosts(posts.map((post) => (post._id === selectedPost._id ? response.data : post)));
       } else {
-        const response = await axios.post("https://acm-react.onrender.com/api/blogs", blogData);
+        console.log(blogData);
+        const response = await axios.post("https://acm-react.onrender.com/api/blogs/create", blogData,
+          {headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}` },
+        });
+        console.log(response.data);
         setPosts([...posts, response.data]);
       }
       resetForm();
