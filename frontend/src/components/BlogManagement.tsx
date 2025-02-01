@@ -40,14 +40,10 @@ export default function BlogManagement() {
       const formData = new FormData();
       formData.append("image", file);
 
-      console.log("Chutiya bc");
-
       const response = await axios.post("https://acm-react.onrender.com/api/blogs/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}` },
 
       });
-
-      console.log("VDSBRSDS");
       setImageUrl(response.data.imageUrl); 
       setImage(URL.createObjectURL(file)); 
     } catch (err) {
@@ -60,30 +56,44 @@ export default function BlogManagement() {
     e.preventDefault();
     try {
       const blogData = { title, content, author, category, image: imageUrl };
-
+  
+      const headers = {
+        "Content-Type": "application/json", // Use application/json instead of multipart/form-data
+        Authorization: `Bearer ${token}`,
+      };
+  
       if (selectedPost) {
-        const response = await axios.put(`https://acm-react.onrender.com/api/blogs/create/${selectedPost._id}`, blogData, { 
-          headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}` },
-      });
+        const response = await axios.put(
+          `https://acm-react.onrender.com/api/blogs/create/${selectedPost._id}`,
+          blogData,
+          { headers }
+        );
         setPosts(posts.map((post) => (post._id === selectedPost._id ? response.data : post)));
       } else {
-        console.log(blogData);
-        const response = await axios.post("https://acm-react.onrender.com/api/blogs/create", blogData,
-          {headers: { "Content-Type": "multipart/form-data" , Authorization: `Bearer ${token}` },
-        });
-        console.log(response.data);
+        const response = await axios.post(
+          "https://acm-react.onrender.com/api/blogs/create",
+          blogData,
+          { headers }
+        );
         setPosts([...posts, response.data]);
       }
+  
       resetForm();
     } catch (err) {
-      console.error("Error saving post:", err);
+      console.error("Error saving post:", err.response?.data || err.message);
     }
   };
 
   // Handle Delete
   const handleDelete = async (id) => {
+    const headers = {
+      "Content-Type": "application/json", // Use application/json instead of multipart/form-data
+      Authorization: `Bearer ${token}`,
+    };
+
     try {
-      await axios.delete(`https://acm-react.onrender.com/api/blogs/${id}`);
+      console.log("Deleting post with id:", id);
+      await axios.delete(`https://acm-react.onrender.com/api/blogs/delete/${id}`, { headers });
       setPosts(posts.filter((post) => post._id !== id));
       if (selectedPost?._id === id) resetForm();
     } catch (err) {

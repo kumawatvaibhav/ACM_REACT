@@ -7,13 +7,12 @@ const authMiddleware = require("../middleware/authMiddleware"); // Import authen
 // Upload image to Cloudinary and return URL (Admin Only)
 router.post("/upload", authMiddleware, upload.single("image"), async (req, res) => {
   try {
-    console.log("File uploaded successfully");
 
     if (!req.file || !req.file.path) {
       return res.status(400).json({ message: "No file uploaded" });
     }
 
-    console.log("File uploaded successfully");
+   
     const imageUrl = req.file.path;
 
     res.json({ imageUrl }); 

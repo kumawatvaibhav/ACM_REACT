@@ -5,7 +5,7 @@ const Blog = require('../models/Blog');
 exports.getBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find();
-    console.log("GET WALA : ", blogs);
+  
     res.json(blogs);
   } catch (err) {
     res.status(500).json({ message: 'Server error' });
@@ -35,9 +35,9 @@ exports.getBlogById = async (req, res) => {
 exports.createBlog = async (req, res) => {
   try {
     const newBlog = new Blog(req.body);
-    console.log("create : ",newBlog);
+    
     const savedBlog = await newBlog.save();
-    console.log(savedBlog);
+  
     res.json(savedBlog);
   } catch (err) {
     res.status(500).json({ message: 'Server error' });
