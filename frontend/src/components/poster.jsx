@@ -1,10 +1,7 @@
-// This Componenet is create to use as a pop when user enters onto our website 
-// To promote new events 
+// This Componenet is create to use as a pop when user enters onto our website
+// To promote new events
 
-
-
-import { useState, useEffect, useRef } from 'react';
-import Poster_Video from '../assets/poster/CodeWars.mp4';
+import { useState, useEffect, useRef } from "react";
 
 const EventPoster = () => {
   const [isPosterVisible, setIsPosterVisible] = useState(true);
@@ -38,15 +35,22 @@ const EventPoster = () => {
             </button>
 
             {/* Video poster */}
-            <video
+            {/* <video
               ref={videoRef}
-              src={Poster_Video}
+              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1739004248/assets/poster/wbi50vhodrhdlv237tuy.gif"
               autoPlay
               muted
               loop
               playsInline
               className="w-full sm:h-[200px] md:h-[500px] lg:h-[600px] object-contain"
-            ></video>
+            ></video> */}
+
+            {/* GIF poster */}
+            <img
+              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1739004248/assets/poster/wbi50vhodrhdlv237tuy.gif"
+              alt="Event Poster"
+              className="w-full sm:h-[200px] md:h-[500px] lg:h-[600px] object-contain"
+            />
           </div>
         </div>
       )}

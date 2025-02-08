@@ -84,6 +84,7 @@ export default function TechBlogPage() {
           </div>
         </div>
       </nav>
+    
 
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-16 text-center">

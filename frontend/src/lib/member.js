@@ -56,14 +56,6 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/architpandeyy/',
   },
   {
-    name : 'Tirth Sharma',
-    role : 'Social Media Head',
-    image : 'https://www.gravatar.com/avatar/?d=mp',
-    description : '',
-    github : 'https://github.com/Tirth9000',
-    linkedin : 'https://www.linkedin.com/in/tirth-sharma-423867251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
-  },
-  {
     name : 'Sameer Gaur',
     role : 'Content head',
     image : 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1738346462/assets/officers/Team/rhhxqpjf5jjohpibgqc5.jpg',
@@ -82,10 +74,26 @@ const teamMembers = [
   {
     name : 'Divy Puranik',
     role : 'Logistics Head',
-    image : 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1735457908/assets/officers/Team/q6vf7jxuxorjcmk0qwp7.jpg',
+    image : 'https://res.cloudinary.com/ddpmw1pgg/image/upload/c_crop,w_2100,h_2800,ar_3:4,g_auto/v1735457908/assets/officers/Team/q6vf7jxuxorjcmk0qwp7.jpg',
     description : '', 
     github : 'https://github.com/DarkRising',
     linkedin : 'https://www.linkedin.com/in/divy-puranik/'
+  },
+  {
+    name : 'Heer Modi',
+    role : 'Event Head',
+    image : 'https://res.cloudinary.com/ddpmw1pgg/image/upload/v1738991173/assets/officers/Team/mttxn8wtfgckrtqgt0ir.jpg',
+    description : '', 
+    github : 'https://github.com',
+    linkedin : 'https://www.linkedin.com/in/heer-modi-0a4841256/'
+  },
+  {
+    name : 'Tirth Sharma',
+    role : 'Social Media Head',
+    image : 'https://www.gravatar.com/avatar/?d=mp',
+    description : '',
+    github : 'https://github.com/Tirth9000',
+    linkedin : 'https://www.linkedin.com/in/tirth-sharma-423867251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
   }
 ];
 

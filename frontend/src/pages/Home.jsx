@@ -8,6 +8,8 @@ import logo from '/logo.webp';
 import AboutSection from '../components/AboutSection';
 import TeamSection from '../components/TeamSection';
 import EventSection from '../components/EventSection';
+import UpcomingEvent from '../components/UpcomingEvent';
+import EventPoster from '../components/poster';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -47,6 +49,7 @@ const Home = () => {
         ></video>
       </div>
       <div className="flex flex-col min-h-screen bg-transparent text-white pt-16">
+        <EventPoster/>
         <motion.header
           ref={refHeader}
           className="flex items-center justify-center h-screen bg-transparent text-white py-12 md:py-20 lg:py-24"
@@ -104,6 +107,14 @@ const Home = () => {
           >
           <TeamSection/>
           </section>
+
+          {/* UPCOMING EVENT SECTION */}
+
+          {/* <section id="UpcomingEvent" className="py-8 md:py-18 lg:py-20 flex justify-center rounded-full">
+            <UpcomingEvent/>
+          </section> */}
+
+          {/* EVENT SECTION */}
 
           <section id="Event" className="py-8 md:py-18 lg:py-20 flex justify-center rounded-full">
             <EventSection/>

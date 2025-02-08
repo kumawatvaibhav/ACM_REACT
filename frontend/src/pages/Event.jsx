@@ -21,6 +21,25 @@ const Event = () => {
 
   const data = [
     {
+      title: "Recruit-a-thon",
+      content: (
+        <div>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          The primary goal of these recruitment drives is to build a diverse and talented team that can contribute to various aspects of ACM, including content creation, event management,
+          marketing, social media, technical development, and design
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1738990828/assets/Gallery/%20Recruitment_Drive/bggl14vqldxmb7q2cpm3.jpg"
+              alt="startup template"
+              className="rounded-lg object-cover h-50 md:h-60 lg:h-80 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+      link: "/event/Hire"
+    },
+    {
       title: "Expert Talk",
       content: (
         <div>
