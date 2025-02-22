@@ -20,6 +20,7 @@ import AdminDashboard from './pages/admin.jsx';
 import BlogDetails from './pages/BlogDetail.jsx';
 import Login from './pages/Login.jsx';
 import Hire from './pages/event_pages/Hire.jsx';
+import WebDev from './pages/event_pages/WebDev.jsx';
 
 // Wrapper Component to handle Navbar
 function Layout({ children }) {
@@ -64,6 +65,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path='*' element={<h1>404 Not Found</h1>} />
           <Route path='/event/Hire' Component={Hire} />
+          <Route path='/event/WebDev' Component={WebDev}/>
         </Routes>
       </Layout>
     </Router>

@@ -46,6 +46,14 @@ const events = [
       "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1738990828/assets/Gallery/%20Recruitment_Drive/bggl14vqldxmb7q2cpm3.jpg",
     link: "/event/Hire",
   },
+  {
+    title: "Web Dev With Vaibhav",
+    description: "This workshop focused on integrating artificial intelligence into web development. It featured an introductory presentation, live demonstrations of innovative AI-driven web tools (v0.dev by Vercel, bolt.new, and lovable), and an interactive mini competition where participants had the opportunity to showcase their skills.",
+    prizePool: "",
+    date: "18th Feb 2025",
+    poster : "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141040/assets/Gallery/Web%20Dev%20With%20Vaibhav/r8k4yqftrwfyg5poeekd.jpg",
+    link : "/event/WebDev",
+  }
 ]
 
 export default function EventSlider() {

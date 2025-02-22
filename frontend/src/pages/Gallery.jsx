@@ -122,6 +122,84 @@ const imagesArray = [
     category: "CodeWars",
     src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774269/Codewars_1_pk1ikd.jpg",
   },
+  {
+    alt: "Image21's alt text",
+    caption: "Web Dev mini competition winner", 
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142910/assets/Gallery/Web%20Dev%20With%20Vaibhav/jenv3vqxcvtvnigcfops.jpg",
+  },
+  {
+    alt: "Image22's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src : "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142903/assets/Gallery/Web%20Dev%20With%20Vaibhav/prnn6xiykz1pyz2nj5h8.jpg",
+  },
+  {
+    alt: "Image23's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142902/assets/Gallery/Web%20Dev%20With%20Vaibhav/gggfeqywizeefqgr8mnc.jpg",
+  },
+  {
+    alt: "Image23's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142900/assets/Gallery/Web%20Dev%20With%20Vaibhav/qs1bslxflc2ccrg1nsa2.jpg",
+  },
+  {
+    alt: "Image24's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142897/assets/Gallery/Web%20Dev%20With%20Vaibhav/bgtqeptsolhmmjxzr7vl.jpg",
+  },
+  {
+    alt: "Image25's alt text",
+    caption: "Website created using AI",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142897/assets/Gallery/Web%20Dev%20With%20Vaibhav/k0p1kiamelwgjirey5ir.jpg",
+  },
+  {
+    alt: "Image26's alt text",
+    caption: "Web dev",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740142895/assets/Gallery/Web%20Dev%20With%20Vaibhav/wwvdfbirkedugdd8e0lr.jpg",
+  },
+  {
+    alt: "Image27's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141041/assets/Gallery/Web%20Dev%20With%20Vaibhav/zdrzdlzpn5oja0raktkv.jpg",
+  },
+  {
+    alt: "Image28's alt text",
+    caption: "ACM Team",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141041/assets/Gallery/Web%20Dev%20With%20Vaibhav/ng5quy2ou1thzuvszbuz.jpg",
+  },
+  {
+    alt: "Image29's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src : "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141041/assets/Gallery/Web%20Dev%20With%20Vaibhav/zbaafddjmbwsru7a36gr.jpg",
+  },
+  {
+    alt: "Image30's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141040/assets/Gallery/Web%20Dev%20With%20Vaibhav/ahr2f9h8tgxsf0v9truf.jpg",
+  },
+  {
+    alt: "Image32's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141040/assets/Gallery/Web%20Dev%20With%20Vaibhav/rsrwm2pwtuocsznxpsqu.jpg",
+  },
+  {
+    alt: "Image33's alt text",
+    caption: "Web Dev session",
+    category: "Web Dev",
+    src: "https://res.cloudinary.com/ddpmw1pgg/image/upload/v1740141040/assets/Gallery/Web%20Dev%20With%20Vaibhav/r8rtpzpuvesvynddqobb.jpg",
+  }
 ];
 
 const Gallery = () => {
