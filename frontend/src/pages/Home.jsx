@@ -91,6 +91,12 @@ const Home = () => {
           </div>
         </motion.header>
 
+        {/* UPCOMING EVENT SECTION */}
+
+        <section id="UpcomingEvent" className="py-8 md:py-18 lg:py-20 flex justify-center rounded-full">
+          <UpcomingEvent/>
+        </section>
+
         {/* Main Content Section */}
         <AboutSection/>
         
@@ -109,11 +115,6 @@ const Home = () => {
           <TeamSection/>
           </section>
 
-          {/* UPCOMING EVENT SECTION */}
-
-          <section id="UpcomingEvent" className="py-8 md:py-18 lg:py-20 flex justify-center rounded-full">
-            <UpcomingEvent/>
-          </section>
 
           {/* EVENT SECTION */}
 

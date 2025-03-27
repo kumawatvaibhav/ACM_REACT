@@ -21,6 +21,25 @@ const Event = () => {
 
   const data = [
     {
+      title: "A Machine Learning Approach to Forecast Crimes in Multi-Density Crime Hotspots",
+      content: (
+        <div>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          Join us for an insightful talk on A Machine Learning Approach to Forecast Crimes in Multi-Density Crime Hotspots by Dr. Eugenio Cesario, Associate Professor at the University of Calabria, Italy. 
+          This session will explore how advanced machine learning techniques can be applied to predict criminal activities in varying crime-dense areas, aiding law enforcement and public safety measures.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1743038539/assets/poster/fgqp3os8muay8e4znf2h.jpg"
+              alt="web dev with ai"
+              className="rounded-lg object-cover h-50 md:h-60 lg:h-80 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+      link: "/event/forecast-crimes"
+    },
+    {
       title: "Web Dev With Vaibhav",
       content: (
         <div>

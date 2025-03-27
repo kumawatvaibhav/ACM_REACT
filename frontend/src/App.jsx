@@ -21,6 +21,7 @@ import BlogDetails from './pages/BlogDetail.jsx';
 import Login from './pages/Login.jsx';
 import Hire from './pages/event_pages/Hire.jsx';
 import WebDev from './pages/event_pages/WebDev.jsx';
+import Forecast_Crime from './pages/event_pages/forecast_crime.jsx';
 
 // Wrapper Component to handle Navbar
 function Layout({ children }) {
@@ -66,6 +67,7 @@ function App() {
           <Route path='*' element={<h1>404 Not Found</h1>} />
           <Route path='/event/Hire' Component={Hire} />
           <Route path='/event/WebDev' Component={WebDev}/>
+          <Route path='/event/forecast-crimes' Component={Forecast_Crime}/>
         </Routes>
       </Layout>
     </Router>
