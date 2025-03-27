@@ -1,16 +1,19 @@
-// This Componenet is create to use as a pop when user enters onto our website
-// To promote new events
-
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";  // Correct import
 
 const EventPoster = () => {
   const [isPosterVisible, setIsPosterVisible] = useState(true);
+  const videoRef = useRef(null);
+  const navigate = useNavigate(); // Correct function
 
   const closePoster = () => {
     setIsPosterVisible(false);
   };
 
-  const videoRef = useRef(null);
+  const handlePosterClick = () => {
+    setIsPosterVisible(false); // Close the popup
+    navigate("/event"); // Navigate to Upcoming Events section
+  };
 
   useEffect(() => {
     const video = videoRef.current;
@@ -34,22 +37,12 @@ const EventPoster = () => {
               &times;
             </button>
 
-            {/* Video poster */}
-            {/* <video
-              ref={videoRef}
-              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1739004248/assets/poster/wbi50vhodrhdlv237tuy.gif"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full sm:h-[200px] md:h-[500px] lg:h-[600px] object-contain"
-            ></video> */}
-
-            {/* GIF poster */}
+            {/* Clickable GIF poster */}
             <img
               src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1739004248/assets/poster/wbi50vhodrhdlv237tuy.gif"
               alt="Event Poster"
-              className="w-full sm:h-[200px] md:h-[500px] lg:h-[600px] object-contain"
+              className="w-full sm:h-[200px] md:h-[500px] lg:h-[600px] object-contain cursor-pointer"
+              onClick={handlePosterClick}
             />
           </div>
         </div>

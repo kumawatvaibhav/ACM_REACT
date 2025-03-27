@@ -56,7 +56,7 @@ export default function UpcomingEvent() {
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 slide-up">
             <motion.img
-              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1734774287/Expert_talk_j2r4nu.png"
+              src="https://res.cloudinary.com/ddpmw1pgg/image/upload/v1743038539/assets/poster/fgqp3os8muay8e4znf2h.jpg"
               alt="Event"
               className="mx-auto overflow-hidden rounded-xl object-contain shadow-lg transition duration-300 hover:scale-[1.03]"
               style={{ width: "350px", height: "auto" }}
@@ -73,27 +73,25 @@ export default function UpcomingEvent() {
                 Event Details
               </motion.h3>
               <motion.p className="text-gray-400" variants={fadeInUp}>
-                <b>Vladan Devedzic</b>
+                <b> Dr. Eugenio Cesario</b>
                 <br></br>
                 <span>
-                  This workshop is organized by the ACM Student Chapter at GSFC
-                  University to provide hands-on learning experiences in
-                  AI-powered web development. The session will include guided
-                  tutorials, interactive exercises, and real-world applications
-                  to enhance participants' understanding and skills.
+                Join us for an insightful talk on A Machine Learning Approach to Forecast Crimes in Multi-Density Crime Hotspots by Dr. Eugenio Cesario, 
+                Associate Professor at the University of Calabria, Italy. This session will explore how advanced machine learning techniques can be applied to predict criminal activities in varying crime-dense areas, 
+                aiding law enforcement and public safety measures.
                 </span>
                 <br />
                 <br />
-                <p>🗓️ Date: 4th October 2024</p>
-                <p>🕐 Time: 4:00 PM onwards</p>
-                <p>📍 Online via google meet </p>
+                <p>🗓️ Date: 23rd April 2025</p>
+                <p>🕐 Time: 10:30 - 11:30</p>
+                <p>📍 SOT Auditorium, GSFC University </p>
               </motion.p>
               <motion.a
-                href="https://meet.google.com/fiq-gqwa-pjz"
-                className="inline-flex items-center space-x-2 text-sm font-medium text-acm-blue hover:underline underline-offset-4 transition duration-200"
+                href="/event/forecast-crimes"
+                className="inline-flex items-center space-x-2 text-sm font-medium text-amber-300 hover:underline underline-offset-4 transition duration-200"
                 variants={fadeInUp}
               >
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
                   y="0px"
@@ -280,8 +278,8 @@ export default function UpcomingEvent() {
                       d="M61.75,39.915c-0.138,0-0.25-0.112-0.25-0.25V35.75c0-0.965-0.785-1.75-1.75-1.75h-7.942 c-0.138,0-0.25-0.112-0.25-0.25s0.112-0.25,0.25-0.25h7.942c1.241,0,2.25,1.01,2.25,2.25v3.915 C62,39.803,61.888,39.915,61.75,39.915z M49.808,34h-2c-0.138,0-0.25-0.112-0.25-0.25s0.112-0.25,0.25-0.25h2 c0.138,0,0.25,0.112,0.25,0.25S49.946,34,49.808,34z M45.808,34h-5.835c-0.138,0-0.25-0.112-0.25-0.25s0.112-0.25,0.25-0.25h5.835 c0.138,0,0.25,0.112,0.25,0.25S45.946,34,45.808,34z"
                     ></path>
                   </g>
-                </svg>
-                <span>Meeting Link</span>
+                </svg> */}
+                <span>Learn More</span>
               </motion.a>
             </div>
           </div>

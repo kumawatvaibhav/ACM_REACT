@@ -50,7 +50,7 @@ const Home = () => {
       </div>
       <div className="flex flex-col min-h-screen bg-transparent text-white pt-16">
         {/* Poster POP-UP for events */}
-        {/* <EventPoster/> */}
+        <EventPoster/>
         <motion.header
           ref={refHeader}
           className="flex items-center justify-center h-screen bg-transparent text-white py-12 md:py-20 lg:py-24"
@@ -111,9 +111,9 @@ const Home = () => {
 
           {/* UPCOMING EVENT SECTION */}
 
-          {/* <section id="UpcomingEvent" className="py-8 md:py-18 lg:py-20 flex justify-center rounded-full">
+          <section id="UpcomingEvent" className="py-8 md:py-18 lg:py-20 flex justify-center rounded-full">
             <UpcomingEvent/>
-          </section> */}
+          </section>
 
           {/* EVENT SECTION */}
 
