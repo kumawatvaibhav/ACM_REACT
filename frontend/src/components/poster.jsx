@@ -12,7 +12,7 @@ const EventPoster = () => {
 
   const handlePosterClick = () => {
     setIsPosterVisible(false); // Close the popup
-    navigate("/event"); // Navigate to Upcoming Events section
+    navigate("/event/forecast-crimes"); // Navigate to Upcoming Events section
   };
 
   useEffect(() => {
